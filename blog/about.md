@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /blog/about/
+permalink: /about/
 title: "about"
 modified: 2014-03-28 22:29
 tags: [about]
