@@ -1,0 +1,166 @@
+/*CSS Document*/
+
+*{
+	margin: 0px;
+	padding: 0;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+@font-face {
+	font-family: Roboto ;
+	font-style:  normal;
+    font-weight: 400;
+	src: url("/assets/fonts/roboto.woff");
+}
+
+/* Buttons */
+.btn {
+  font-family: Roboto;
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  zoom: 1;
+  border: 2px solid white;
+  color: white;
+  &:visited {
+    color: white;
+  }
+  &:hover {
+    background-color: white;
+    color: #222;
+  }
+}
+
+/* FOR ALL SLIDES */
+
+.slide{
+	width:100%;
+}
+
+/* SLIDES */
+
+#slide1{
+    height: 100%;
+    background: url(/images/homepic.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#slide2{
+    height: 50%;
+	background-color: white;
+    background-attachment: fixed;
+}
+#slide3{
+    height: 60%;
+    background: url(/images/bg-4.jpg);
+    background-attachment: fixed;
+}
+#slide4{
+    height: 100%;
+    background: url(/images/uestc.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+	font-family: Verdana, Geneva, sans-serif;
+	color: rgba(0,0,0,0.3);
+	font-size: 3em;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -235px;
+	margin-top: -59px;
+	z-index: 1;
+}
+#ball1{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: absolute;
+	top: 300px;
+	left: 50px;
+	background-color: rgba(0,0,0,0.1);
+}
+#ball2{
+	width: 40px;
+	height: 40px;
+	border-radius: 200px;
+	position: absolute;
+	top: 80px;
+	right: 50px;
+	background-color: rgba(0,0,0,0.1);
+}
+#ball3{
+	width: 150px;
+	height: 150px;
+	border-radius: 200px;
+	position: absolute;
+	top: 30px;
+	right: 200px;
+	background-color: rgba(0,0,0,0.1);
+}
+#ball4{
+	width: 40px;
+	height: 40px;
+	border-radius: 200px;
+	position: absolute;
+	top: 100px;
+	right: 500px;
+	background-color: rgba(0,0,0,0.1);
+}
+
+#slide4 #ball1{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: absolute;
+	top: 490px;
+	left: 900px;
+	background-color: rgba(0,0,0,0.1);
+}
+#slide4 #ball3{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: absolute;
+	top: 600px;
+	left: 500px;
+	background-color: rgba(0,0,0,0.1);
+}
+
+/*Photo Circle*/
+.circle{
+    background-image: url(/images/photo_circle.png);
+    background-size: contain;
+	width: 240px;
+	height: 240px;
+	border-radius: 200px;
+	position: absolute;
+	top: 60%;
+	left: 70%;
+}
+.h2{
+    color: white;
+}
+
+.TextCenterDark{
+    text-align: center;
+    margin-top:18%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+
+.TextCenterLight{
+    text-align: center;
+    font-family: Roboto;
+    margin-left:10%;
+    margin-right:10%;
+}
+
