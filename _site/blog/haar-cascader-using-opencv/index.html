@@ -16,15 +16,15 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Haar小波特征的AdaBoost级联器:OpenCV实现">
 <meta property="og:description" content="OnceMore">
-<meta property="og:url" content="http://localhost:4000/blog/haar-cascader-using-opencv/">
+<meta property="og:url" content="http://oncemore2020.github.io/blog/haar-cascader-using-opencv/">
 <meta property="og:site_name" content="OnceMore">
 
 <meta name="google-site-verification" content="i2ojlx9jpDBBAKREtMe5JMN1DCdIAlO97Qrf4vOuFF4">
 
 
 
-<link rel="canonical" href="http://localhost:4000/blog/haar-cascader-using-opencv/">
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="OnceMore Feed">
+<link rel="canonical" href="http://oncemore2020.github.io/blog/haar-cascader-using-opencv/">
+<link href="http://oncemore2020.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="OnceMore Feed">
 <link rel="author" href="https://plus.google.com/110411659539252839234?rel=author">
 
 <!-- http://t.co/dKP3o1e -->
@@ -33,33 +33,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.min.css">
+<link rel="stylesheet" href="http://oncemore2020.github.io/assets/css/main.min.css">
 <!-- Webfonts -->
 <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- Load Modernizr -->
-<script src="http://localhost:4000/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+<script src="http://oncemore2020.github.io/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<link rel="shortcut icon" href="http://oncemore2020.github.io/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<link rel="shortcut icon" href="http://oncemore2020.github.io/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://oncemore2020.github.io/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://oncemore2020.github.io/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://oncemore2020.github.io/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://oncemore2020.github.io/images/apple-touch-icon-144x144-precomposed.png">
 
 
 
 
-<style type="text/css">body {background-image:url(http://localhost:4000/images/bg-4.jpg);}</style>
+<style type="text/css">body {background-image:url(http://oncemore2020.github.io/images/bg-4.jpg);}</style>
 
 
 </head>
@@ -70,14 +70,14 @@
 <nav id="dl-menu" class="dl-menuwrapper" role="navigation">
 	<button class="dl-trigger">Open Menu</button>
 	<ul class="dl-menu">
-		<li><a href="http://localhost:4000/blog">博客</a></li>
-		<li><a href="http://localhost:4000">主页</a></li>
-		<li><a href="http://localhost:4000/blog/about/">关于博客</a></li>
+		<li><a href="http://oncemore2020.github.io/blog">博客</a></li>
+		<li><a href="http://oncemore2020.github.io">主页</a></li>
+		<li><a href="http://oncemore2020.github.io/blog/about/">关于博客</a></li>
 		<li>
 			<a href="#">文章目录</a>
 			<ul class="dl-submenu">
-				<li><a href="http://localhost:4000/blog/posts/">所有文章</a></li>
-				<li><a href="http://localhost:4000/blog/tags/">所有标签</a></li>
+				<li><a href="http://oncemore2020.github.io/blog/posts/">所有文章</a></li>
+				<li><a href="http://oncemore2020.github.io/blog/tags/">所有标签</a></li>
 			</ul>
 		</li>
 		
@@ -89,7 +89,7 @@
 <div class="entry-header">
   
   <div class="entry-image">
-    <img src="http://localhost:4000/images/feature-cv2.jpg" alt="基于Haar小波特征的AdaBoost级联器:OpenCV实现">
+    <img src="http://oncemore2020.github.io/images/feature-cv2.jpg" alt="基于Haar小波特征的AdaBoost级联器:OpenCV实现">
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
 
@@ -99,7 +99,7 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="http://localhost:4000/blog/haar-cascader-using-opencv/" rel="bookmark" title="基于Haar小波特征的AdaBoost级联器:OpenCV实现">基于Haar小波特征的AdaBoost级联器:OpenCV实现</a></h1>
+          <h1 class="entry-title"><a href="http://oncemore2020.github.io/blog/haar-cascader-using-opencv/" rel="bookmark" title="基于Haar小波特征的AdaBoost级联器:OpenCV实现">基于Haar小波特征的AdaBoost级联器:OpenCV实现</a></h1>
         
         <h2>April 14, 2014</h2>
         
@@ -136,15 +136,15 @@
 <p>目前打算采用HOG特征来继续完成毕业设计。</p>
 
       <footer class="entry-meta">
-        <span class="entry-tags"><a href="http://localhost:4000/tags/#OpenCV" title="Pages tagged OpenCV" class="tag">OpenCV</a><a href="http://localhost:4000/tags/#Computer Visions" title="Pages tagged Computer Visions" class="tag">Computer Visions</a><a href="http://localhost:4000/tags/#学习笔记" title="Pages tagged 学习笔记" class="tag">学习笔记</a></span>
-        <span><a href="http://localhost:4000/blog/haar-cascader-using-opencv/" rel="bookmark" title="基于Haar小波特征的AdaBoost级联器:OpenCV实现">基于Haar小波特征的AdaBoost级联器:OpenCV实现</a> was published on <span class="entry-date date published updated"><time datetime="2014-04-14T00:00:00-04:00">April 14, 2014</time></span></span>
+        <span class="entry-tags"><a href="http://oncemore2020.github.io/tags/#OpenCV" title="Pages tagged OpenCV" class="tag">OpenCV</a><a href="http://oncemore2020.github.io/tags/#Computer Visions" title="Pages tagged Computer Visions" class="tag">Computer Visions</a><a href="http://oncemore2020.github.io/tags/#学习笔记" title="Pages tagged 学习笔记" class="tag">学习笔记</a></span>
+        <span><a href="http://oncemore2020.github.io/blog/haar-cascader-using-opencv/" rel="bookmark" title="基于Haar小波特征的AdaBoost级联器:OpenCV实现">基于Haar小波特征的AdaBoost级联器:OpenCV实现</a> was published on <span class="entry-date date published updated"><time datetime="2014-04-14T00:00:00-04:00">April 14, 2014</time></span></span>
         (revised: <span class="entry-date date modified"><time datetime="2014-04-14 01:08:38 -0400">04/14/2014</time></span>)
-        <span class="author vcard"><span class="fn"><a href="http://localhost:4000/about/" title="About OnceMore">OnceMore</a></span></span>
+        <span class="author vcard"><span class="fn"><a href="http://oncemore2020.github.io/about/" title="About OnceMore">OnceMore</a></span></span>
         <div class="social-share">
           <ul class="socialcount socialcount-small inline-list">
-            <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/haar-cascader-using-opencv/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-            <li class="twitter"><a href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/haar-cascader-using-opencv/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-            <li class="googleplus"><a href="https://plus.google.com/share?url=http://localhost:4000/blog/haar-cascader-using-opencv/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+            <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://oncemore2020.github.io/blog/haar-cascader-using-opencv/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+            <li class="twitter"><a href="https://twitter.com/intent/tweet?text=http://oncemore2020.github.io/blog/haar-cascader-using-opencv/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+            <li class="googleplus"><a href="https://plus.google.com/share?url=http://oncemore2020.github.io/blog/haar-cascader-using-opencv/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
           </ul>
         </div><!-- /.social-share -->
       </footer>
@@ -154,22 +154,22 @@
     <div class="read-more">
       
         <div class="read-more-header">
-          <a href="http://localhost:4000/blog/pede-detection-surveynexps-translation/" class="read-more-btn">Read More</a>
+          <a href="http://oncemore2020.github.io/blog/pede-detection-surveynexps-translation/" class="read-more-btn">Read More</a>
         </div><!-- /.read-more-header -->
         <div class="read-more-content">
-          <h3><a href="http://localhost:4000/blog/hognote/" title="HOG/linSVM行人检测器：OpenCV+SVMLight实现">HOG/linSVM行人检测器：OpenCV+SVMLight实现</a></h3>
-          <p>采用HOG特征进行训练的SVM分类器在中等分辨率和低处理时间限制要求下具有明显优势，笔记记录HOG特征的理论基础，以及采用OpenCV的_HOGDescriptor_配合SVMLight实现分类器。包括：* HOG特征理论基础* 程序实现# 技术笔记排版为PDF格式方便下载...&hellip; <a href="http://localhost:4000/blog/hognote/">Continue reading</a></p>
+          <h3><a href="http://oncemore2020.github.io/blog/hognote/" title="HOG/linSVM行人检测器：OpenCV+SVMLight实现">HOG/linSVM行人检测器：OpenCV+SVMLight实现</a></h3>
+          <p>采用HOG特征进行训练的SVM分类器在中等分辨率和低处理时间限制要求下具有明显优势，笔记记录HOG特征的理论基础，以及采用OpenCV的_HOGDescriptor_配合SVMLight实现分类器。包括：* HOG特征理论基础* 程序实现# 技术笔记排版为PDF格式方便下载...&hellip; <a href="http://oncemore2020.github.io/blog/hognote/">Continue reading</a></p>
         </div><!-- /.read-more-content -->
       
       <div class="read-more-list">
         
           <div class="list-item">
-            <h4><a href="http://localhost:4000/blog/pede-detection-surveynexps-translation/" title="综述翻译:Monocular Pedestrian Detection:Survey and Experiments">综述翻译:Monocular Pedestrian Detection:Survey and Experiments</a></h4>
+            <h4><a href="http://oncemore2020.github.io/blog/pede-detection-surveynexps-translation/" title="综述翻译:Monocular Pedestrian Detection:Survey and Experiments">综述翻译:Monocular Pedestrian Detection:Survey and Experiments</a></h4>
             <span>Published on April 13, 2014</span>
           </div><!-- /.list-item -->
         
           <div class="list-item">
-            <h4><a href="http://localhost:4000/blog/opencvxue-xi-bi-ji/" title="OpenCV学习笔记">OpenCV学习笔记</a></h4>
+            <h4><a href="http://oncemore2020.github.io/blog/opencvxue-xi-bi-ji/" title="OpenCV学习笔记">OpenCV学习笔记</a></h4>
             <span>Published on April 11, 2014</span>
           </div><!-- /.list-item -->
         
@@ -186,8 +186,8 @@
 </div><!-- /.footer-wrapper -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://oncemore2020.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://oncemore2020.github.io/assets/js/scripts.min.js"></script>
 
 <!-- Asynchronous Google Analytics snippet -->
 <script>

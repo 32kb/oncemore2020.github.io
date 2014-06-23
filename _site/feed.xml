@@ -2,27 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">OnceMore</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-06-22T22:19:54-04:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://oncemore2020.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://oncemore2020.github.io" />
+<updated>2014-06-22T23:07:25-04:00</updated>
+<id>http://oncemore2020.github.io/</id>
 <author>
   <name>OnceMore</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://oncemore2020.github.io/</uri>
   <email>guanhwang2011@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[HOG/linSVM行人检测器：OpenCV+SVMLight实现]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/blog/hognote/" />
-  <id>http://localhost:4000/blog/hognote</id>
+ <link rel="alternate" type="text/html" href="http://oncemore2020.github.io/blog/hognote/" />
+  <id>http://oncemore2020.github.io/blog/hognote</id>
   <updated>2014-04-20 23:05:22 -0400T00:00:00-00:00</updated>
   <published>2014-04-21T00:00:00-04:00</published>
   
   <author>
     <name>OnceMore</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://oncemore2020.github.io</uri>
     <email>guanhwang2011@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;采用HOG特征进行训练的SVM分类器在中等分辨率和低处理时间限制要求下具有明显优势，笔记记录HOG特征
@@ -124,20 +124,20 @@
 HOG的学习打算聚焦于_Improving object detection with boosted histograms_
 这篇文章。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/hognote/&quot;&gt;HOG/linSVM行人检测器：OpenCV+SVMLight实现&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://localhost:4000&quot;&gt;OnceMore&lt;/a&gt; on April 21, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://oncemore2020.github.io/blog/hognote/&quot;&gt;HOG/linSVM行人检测器：OpenCV+SVMLight实现&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://oncemore2020.github.io&quot;&gt;OnceMore&lt;/a&gt; on April 21, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[基于Haar小波特征的AdaBoost级联器:OpenCV实现]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/blog/haar-cascader-using-opencv/" />
-  <id>http://localhost:4000/blog/haar-cascader-using-opencv</id>
+ <link rel="alternate" type="text/html" href="http://oncemore2020.github.io/blog/haar-cascader-using-opencv/" />
+  <id>http://oncemore2020.github.io/blog/haar-cascader-using-opencv</id>
   <updated>2014-04-14 01:08:38 -0400T00:00:00-00:00</updated>
   <published>2014-04-14T00:00:00-04:00</published>
   
   <author>
     <name>OnceMore</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://oncemore2020.github.io</uri>
     <email>guanhwang2011@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;基于Haar小波的AdaBoost级联器在低分辨率条件和(接近于)实时处理应用下具有优势，
@@ -163,20 +163,20 @@ HOG的学习打算聚焦于_Improving object detection with boosted histograms_
 
 &lt;p&gt;目前打算采用HOG特征来继续完成毕业设计。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/haar-cascader-using-opencv/&quot;&gt;基于Haar小波特征的AdaBoost级联器:OpenCV实现&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://localhost:4000&quot;&gt;OnceMore&lt;/a&gt; on April 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://oncemore2020.github.io/blog/haar-cascader-using-opencv/&quot;&gt;基于Haar小波特征的AdaBoost级联器:OpenCV实现&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://oncemore2020.github.io&quot;&gt;OnceMore&lt;/a&gt; on April 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[综述翻译:Monocular Pedestrian Detection:Survey and Experiments]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/blog/pede-detection-surveynexps-translation/" />
-  <id>http://localhost:4000/blog/pede-detection-surveynexps-translation</id>
+ <link rel="alternate" type="text/html" href="http://oncemore2020.github.io/blog/pede-detection-surveynexps-translation/" />
+  <id>http://oncemore2020.github.io/blog/pede-detection-surveynexps-translation</id>
   <updated>2014-04-13 10:10:48 -0400T00:00:00-00:00</updated>
   <published>2014-04-13T00:00:00-04:00</published>
   
   <author>
     <name>OnceMore</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://oncemore2020.github.io</uri>
     <email>guanhwang2011@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;这是本科毕设期间读的一篇关于行人检测的综述文献的中文翻译。论文前后读过3次+，因为涉及到的细节知识和其它论文还
@@ -190,20 +190,20 @@ HOG的学习打算聚焦于_Improving object detection with boosted histograms_
 &lt;h1 id=&quot;section-1&quot;&gt;译文&lt;/h1&gt;
 &lt;p&gt;为了保留论文的格式，仍然使用LaTeX排版，使用xeCJK宏包配合IEEETrans模板支持中文环境：&lt;a href=&quot;/assets/pdf/ChineseVersion.pdf&quot;&gt;点此下载&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/pede-detection-surveynexps-translation/&quot;&gt;综述翻译:Monocular Pedestrian Detection:Survey and Experiments&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://localhost:4000&quot;&gt;OnceMore&lt;/a&gt; on April 13, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://oncemore2020.github.io/blog/pede-detection-surveynexps-translation/&quot;&gt;综述翻译:Monocular Pedestrian Detection:Survey and Experiments&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://oncemore2020.github.io&quot;&gt;OnceMore&lt;/a&gt; on April 13, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[OpenCV学习笔记]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/blog/opencvxue-xi-bi-ji/" />
-  <id>http://localhost:4000/blog/opencvxue-xi-bi-ji</id>
+ <link rel="alternate" type="text/html" href="http://oncemore2020.github.io/blog/opencvxue-xi-bi-ji/" />
+  <id>http://oncemore2020.github.io/blog/opencvxue-xi-bi-ji</id>
   <updated>2014-04-11 07:45:08 -0400T00:00:00-00:00</updated>
   <published>2014-04-11T00:00:00-04:00</published>
   
   <author>
     <name>OnceMore</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://oncemore2020.github.io</uri>
     <email>guanhwang2011@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;主要记录毕业设计期间对&lt;a href=&quot;http://opencv.org/&quot;&gt;OpenCV 2&lt;/a&gt;的学习笔记，包括&lt;/p&gt;
@@ -215,20 +215,20 @@ HOG的学习打算聚焦于_Improving object detection with boosted histograms_
 &lt;/ul&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/opencvxue-xi-bi-ji/&quot;&gt;OpenCV学习笔记&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://localhost:4000&quot;&gt;OnceMore&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://oncemore2020.github.io/blog/opencvxue-xi-bi-ji/&quot;&gt;OpenCV学习笔记&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://oncemore2020.github.io&quot;&gt;OnceMore&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[重新修炼C-K&R-Chapter1]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/blog/knr-chap1/" />
-  <id>http://localhost:4000/blog/knr-chap1</id>
+ <link rel="alternate" type="text/html" href="http://oncemore2020.github.io/blog/knr-chap1/" />
+  <id>http://oncemore2020.github.io/blog/knr-chap1</id>
   <updated>2014-04-10 20:51:01 -0400T00:00:00-00:00</updated>
   <published>2014-04-11T00:00:00-04:00</published>
   
   <author>
     <name>OnceMore</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://oncemore2020.github.io</uri>
     <email>guanhwang2011@gmail.com</email>
   </author>
   <content type="html">&lt;h1 class=&quot;no_toc&quot; id=&quot;section&quot;&gt;目录&lt;/h1&gt;
@@ -2260,20 +2260,20 @@ generality.)&lt;/p&gt;
 &lt;/blockquote&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/knr-chap1/&quot;&gt;重新修炼C-K&R-Chapter1&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://localhost:4000&quot;&gt;OnceMore&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://oncemore2020.github.io/blog/knr-chap1/&quot;&gt;重新修炼C-K&R-Chapter1&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://oncemore2020.github.io&quot;&gt;OnceMore&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Relearning C in a comprehensive way]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/blog/relearning-c-in-a-comprehensive-way/" />
-  <id>http://localhost:4000/blog/relearning-c-in-a-comprehensive-way</id>
+ <link rel="alternate" type="text/html" href="http://oncemore2020.github.io/blog/relearning-c-in-a-comprehensive-way/" />
+  <id>http://oncemore2020.github.io/blog/relearning-c-in-a-comprehensive-way</id>
   <updated>2014-04-02 21:45:16 -0400T00:00:00-00:00</updated>
   <published>2014-04-03T00:00:00-04:00</published>
   
   <author>
     <name>OnceMore</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://oncemore2020.github.io</uri>
     <email>guanhwang2011@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;这是一系列关于C语言学习的笔记，题目的意思是“重新修炼C语言”，从了解到使用C语言已经快3年了，但是之前学得真是马马虎
@@ -2318,20 +2318,20 @@ generality.)&lt;/p&gt;
 
 &lt;h1 id=&quot;section-5&quot;&gt;数据结构与算法分析&lt;/h1&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/relearning-c-in-a-comprehensive-way/&quot;&gt;Relearning C in a comprehensive way&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://localhost:4000&quot;&gt;OnceMore&lt;/a&gt; on April 03, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://oncemore2020.github.io/blog/relearning-c-in-a-comprehensive-way/&quot;&gt;Relearning C in a comprehensive way&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://oncemore2020.github.io&quot;&gt;OnceMore&lt;/a&gt; on April 03, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Markdown学习笔记]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/blog/markdownxue-xi-bi-ji/" />
-  <id>http://localhost:4000/blog/markdownxue-xi-bi-ji</id>
+ <link rel="alternate" type="text/html" href="http://oncemore2020.github.io/blog/markdownxue-xi-bi-ji/" />
+  <id>http://oncemore2020.github.io/blog/markdownxue-xi-bi-ji</id>
   <updated>2014-03-31 08:42:37 -0400T00:00:00-00:00</updated>
   <published>2014-03-31T00:00:00-04:00</published>
   
   <author>
     <name>OnceMore</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://oncemore2020.github.io</uri>
     <email>guanhwang2011@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Markdown是一种&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80&quot;&gt;&lt;strong&gt;轻量级标记语言&lt;/strong&gt;&lt;/a&gt;，由&lt;a href=&quot;http://en.wikipedia.org/wiki/John_Gruber&quot;&gt;&lt;strong&gt;John Gruber&lt;/strong&gt;&lt;/a&gt;和
@@ -3190,7 +3190,7 @@ $$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/markdownxue-xi-bi-ji/&quot;&gt;Markdown学习笔记&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://localhost:4000&quot;&gt;OnceMore&lt;/a&gt; on March 31, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://oncemore2020.github.io/blog/markdownxue-xi-bi-ji/&quot;&gt;Markdown学习笔记&lt;/a&gt; was originally published by OnceMore at &lt;a href=&quot;http://oncemore2020.github.io&quot;&gt;OnceMore&lt;/a&gt; on March 31, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

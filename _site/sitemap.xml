@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://localhost:4000</loc>
+        <loc>http://oncemore2020.github.io</loc>
     </url>
     
     
     <url>
-        <loc>http://localhost:4000/blog/about/</loc>
+        <loc>http://oncemore2020.github.io/blog/about/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/feed.xml</loc>
+        <loc>http://oncemore2020.github.io/feed.xml</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/ideaspace/</loc>
+        <loc>http://oncemore2020.github.io/blog/ideaspace/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/index.html</loc>
+        <loc>http://oncemore2020.github.io/blog/index.html</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/posts/</loc>
+        <loc>http://oncemore2020.github.io/blog/posts/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/sitemap.xml</loc>
+        <loc>http://oncemore2020.github.io/sitemap.xml</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/tags/</loc>
+        <loc>http://oncemore2020.github.io/blog/tags/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/toolbox/</loc>
+        <loc>http://oncemore2020.github.io/toolbox/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/page2/index.html</loc>
+        <loc>http://oncemore2020.github.io/blog/page2/index.html</loc>
     </url>
     
 
     
     <url>
-        <loc>http://localhost:4000/blog/hognote/</loc>
+        <loc>http://oncemore2020.github.io/blog/hognote/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/haar-cascader-using-opencv/</loc>
+        <loc>http://oncemore2020.github.io/blog/haar-cascader-using-opencv/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/pede-detection-surveynexps-translation/</loc>
+        <loc>http://oncemore2020.github.io/blog/pede-detection-surveynexps-translation/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/opencvxue-xi-bi-ji/</loc>
+        <loc>http://oncemore2020.github.io/blog/opencvxue-xi-bi-ji/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/knr-chap1/</loc>
+        <loc>http://oncemore2020.github.io/blog/knr-chap1/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/relearning-c-in-a-comprehensive-way/</loc>
+        <loc>http://oncemore2020.github.io/blog/relearning-c-in-a-comprehensive-way/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/blog/markdownxue-xi-bi-ji/</loc>
+        <loc>http://oncemore2020.github.io/blog/markdownxue-xi-bi-ji/</loc>
     </url>
     
 </urlset>
