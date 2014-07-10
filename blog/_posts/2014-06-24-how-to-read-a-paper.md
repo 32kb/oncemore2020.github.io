@@ -4,7 +4,7 @@ title: "How To Read A Paper"
 modified: 2014-06-24 14:47:04 +0800
 tags: [心法]
 image:
-  feature: abstract-7.jpg
+  feature: paper.png
 comments: true
 share: true
 ---
