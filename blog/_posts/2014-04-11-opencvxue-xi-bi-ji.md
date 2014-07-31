@@ -14,6 +14,7 @@ share: true
 
 <div markdown="0">
 <a href="http://oncemore2020.github.io/blog/opencv2install" class="btn btn-success">OpenCV2安装</a>
+<a href="http://oncemore2020.github.io/blog/opencv2linux/" class="btn btn-success">快速开始OpenCV</a>
 </div>
 
 #文档翻译
