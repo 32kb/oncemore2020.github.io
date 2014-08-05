@@ -23,4 +23,7 @@ share: true
 
 #技术笔记
 
+<div markdown="0">
+<a href="http://oncemore2020.github.io/blog/opencv2basic" class="btn btn-success">OpenCV2基础操作</a>
+</div>
 
