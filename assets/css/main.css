@@ -384,8 +384,8 @@ li code {
   font-size: 0.75rem;
   line-height: 1.5;
   white-space: nowrap;
-  background-color: #f2f2f2;
-  border: 1px solid #e6e6e6;
+  background-color: #0f2;
+  border: 1px solid #000000;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
@@ -687,8 +687,8 @@ pre::-webkit-scrollbar-thumb:horizontal {
 .CodeRay .code pre {
   padding: 1em;
   margin: 0;
-  background-color: #272822;
-  border: 1px solid #dbdbdb;
+  background-color: #0f2;
+  border: 1px solid #000000;
 }
 
 span.CodeRay {
@@ -3978,7 +3978,7 @@ body {
   top: 0;
   display: table;
   width: 100%;
-  height: 400px;
+  height: 200px;
   margin-top: 0;
   overflow: hidden;
 }
@@ -4028,7 +4028,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  min-height: 400px;
+  min-height: 180px;
   overflow: hidden;
 }
 
@@ -4051,53 +4051,6 @@ body {
   min-width: 50%;
   min-height: 50%;
   margin: auto;
-}
-
-.image-credit {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  max-width: 440px;
-  padding: 10px 15px;
-  margin: 0 auto;
-  font-size: 12px;
-  font-size: 0.75rem;
-  color: #ffffff;
-  text-align: right;
-  background-color: rgba(34, 34, 34, 0.5);
-  -webkit-border-top-right-radius: 3px;
-          border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 0;
-          border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-          border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 3px;
-          border-top-left-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 3px;
-  -webkit-background-clip: padding-box;
-     -moz-background-clip: padding;
-          background-clip: padding-box;
-}
-
-@media only screen and (min-width: 48em) {
-  .image-credit {
-    max-width: 760px;
-  }
-}
-
-@media only screen and (min-width: 62.5em) {
-  .image-credit {
-    max-width: 960px;
-  }
-}
-
-.image-credit a {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 .entry-meta {
