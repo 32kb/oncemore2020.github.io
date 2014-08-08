@@ -36,8 +36,6 @@ task :new_post, :title do |t, args|
     post.puts "tags: [#{tags}]"
     post.puts "image:"
     post.puts "  feature: "
-    post.puts "  credit: "
-    post.puts "  creditlink: "
     post.puts "comments: "
     post.puts "share: "
     post.puts "---"
@@ -67,8 +65,6 @@ task :new_page, :title do |t, args|
     page.puts "tags: [#{tags}]"
     page.puts "image:"
     page.puts "  feature: "
-    page.puts "  credit: "
-    page.puts "  creditlink: "
     page.puts "share: "
     page.puts "---"
   end
