@@ -17,13 +17,22 @@ share: true
 <a href="http://oncemore2020.github.io/blog/opencv2linux/" class="btn btn-success">快速开始OpenCV</a>
 </div>
 
-#文档翻译
-
-#程序实现
-
 #技术笔记
 
 <div markdown="0">
 <a href="http://oncemore2020.github.io/blog/opencv2basic" class="btn btn-success">OpenCV2基础操作</a>
 </div>
+
+#文档翻译
+
+## OpenCV Tutorials
+
+### Core Module. The Core Functionality
+
+<div markdown="0">
+<a href="http://oncemore2020.github.io/blog/opencv2mat" class="btn btn-success">Mat - The Basic Image Container</a>
+</div>
+
+#程序实现
+
 
