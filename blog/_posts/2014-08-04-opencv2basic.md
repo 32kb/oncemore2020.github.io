@@ -9,17 +9,27 @@ comments: true
 share: true
 ---
 
-快速了解OpenCV2的一些基础操作，对于系统地开始阅读和学习文档有很大帮助。本文介绍OpenCV的基础操作。
+快速了解OpenCV2基础操作，对于系统地开始阅读和学习文档有很大帮助。
 
 # Mat数据结构
 将获取的图像转码到数字设备时，采用一张数表(矩阵)来存储图像的每一像素强度[^stdmat]。如下图所示，每个位置的数字表示当前位置的像素强度。
 
 ![Mat Demo](/images/opencv2basic/mat.jpg)
 
-[^stdmat]:OpenCV2的`Mat`类支持标准I/O，可读入一副图像到`image`变量，然后使用`std::cout << image << endl;`一探究竟。
+[^stdmat]:OpenCV2的`Mat`支持标准I/O，可读入一副图像到`image`变量，然后使用`std::cout << image << endl;`一探究竟。
 
-具体如何存储和获取这些像素值取决于具体需求，但是最终计算机内的所有的图像都是用各种矩阵来描述的。OpenCV负责对图像信息的处理
-和运算，学习OpenCV从理解图像存储和处理的原理开始。
+具体如何存储和获取这些像素值取决于具体需求，但是最终计算机内的所有的图像都是用各种矩阵来描述的。
+OpenCV2采用`cv::Mat`类来存储图像，OpenCV2提供的C++ API中定义的类和函数都定义在命名空间`cv`中，可用如下方式声明:
+
+{% highlight C++ %}
+using namespace cv;
+{% endhighlight %}
+
+创建一个变量来存储图像：
+
+{% highlight C++ %}
+cv::Mat image;
+{% endhighlight %}
 
 ## 存储方法
 存储像素值来表示图像涉及到**色彩空间**和**数据类型**。**色彩空间**是使用一组值来表示图像色彩的数学模型，最简单的是**灰度值图像**，处理的
@@ -30,15 +40,27 @@ share: true
 * HSV/HLS：将色彩分解为色调，饱和度，强度/亮度等元素，这种描述更自然直观，艺术家常用的色彩空间；
 * CMYK : 使用青，品红，黄，黑四种油墨叠加在白色纸张上来体现彩色图像，常见于打印设备
 
-现实世界的像素强度值是连续的，而计算机只能直接对离散数据进行处理，因此需要对像素强度进行**量化**为离散数值，用相应**数据类型**存储，常采用与`char`数据
-类型相同的数据空间：1字节/8比特，对应十进制为无符号(0~255)/带符号(-127~+127)。可以采用更大的数据类型来存储，会带来图像存储空间
+现实世界的像素强度值是连续的，而计算机只能直接对离散数据进行处理，因此需要将像素强度进行**量化**为离散数值，用相应**数据类型**存储，常采用与`char`数据
+类型相同的数据空间：1字节或8比特，对应十进制为无符号(0~255)/带符号(-127~+127)。可以采用更大的数据类型来存储，会带来图像存储空间
 的增长。
+
 
 ## OpenCV图像存储数据结构历史
 OpenCV诞生于2001年，最初版本运算库是基于C接口设计的，采用的C数据结构`IplImage`来存储图像，此方法引入了所有的C缺陷，其中最
-主要的问题是手动管理内存，要求用户负责内存的分配和释放，这种情况在较小型的程序设计重影响并不大，当设计任务增长时用户可能会花
-更多的时间来处理内存管理问题。OpenCV2引入了C++接口，当然也包括C++围绕着**类(class)**的设计模式的一种新概念:**自动内存管理**。OpenCV2
-采用`Mat`数据结构来存储图像。
+主要的问题是手动管理内存，要求用户负责内存的分配和释放，这种情况在较小型的程序设计中影响并不大，当设计任务增长时用户可能会花
+更多的时间来处理内存管理问题。如采用C接口来读入一个图像：
+
+{% highlight C++ %}
+IplImage* iplImage = cvLoadImage("c:\\img.jpg"); 
+{% endhighlight %}
+
+当不再使用变量时需要手动释放内存空间:
+
+{% highlight C++ %}
+cvReleaseImage(&iplImage);
+{% endhighlight %}
+
+OpenCV2引入了C++接口`cv::Mat`，当然也包括C++围绕着**类(class)**的设计模式的一种新概念:**自动内存管理**。
 
 ## 引用计数系统
 `Mat`从类的角度可分为两部分：**矩阵头**(矩阵大小，存储方法，初始地址)和一个指向数据单元的**指针**。矩阵头的大小是固定的，但是矩阵
@@ -106,6 +128,23 @@ Mat G;
 A.copyTo(G);    //硬拷贝
 {% endhighlight %}
 
+## 类型转换
+
+同时，OpenCV2提供了将`IplImage`类型转换为`cv::Mat`类的方法：
+
+{% highlight C++ %}
+cv::Mat image4(iplImage,false);
+{% endhighlight %}
+
+其中默认参数`false`表示软拷贝，设置为`true`表示硬拷贝。这时特别需要注意软拷贝时内存管理的问题。
+OpenCV2同样提供了对C接口的数据结构进行引用计数的指针类`Ptr<IplImage>`：
+
+{% highlight C++ %}
+cv::Ptr<IplImage> iplImage = cvLoadImage("c:\\img.jpg");
+{% endhighlight %}
+
+这可以规避C API的手动内存管理，但是应该尽量使用OpenCV2提供的C++ API `cv::Mat`类。
+
 # 图像I/O
 OpenCV将包括图像输入/存储/输出等功能封装进`core`模块中，使用前需要包含头文件：
 
@@ -129,14 +168,21 @@ Mat::Mat(int rows, int cols, int type, const Scalar& s)
 * type: 矩阵类型
 * Scalar& s: 初始化参数
 
-Mat作为图像容器表现优秀，同时，当其作为一个通用矩阵类时，也可用于创建和处理多维矩阵。矩阵类型具有特定的语法规则：
+OpenCV2在创建`cv::Mat`对象时可指定图像尺寸以及存储方式，如：
+
+{% highlight C++ %}
+cv::Mat ima(240,320,CV_8UC3,cv::Scalar(100));
+{% endhighlight %}
+
+其中前两个参数表示尺寸，`CV_8U`中`8`表示采用8位来存储一个像素强度，也可指定为`16`甚至是`32`，`U`表示用无符号类型，
+也可以使用带符号类型`S`或浮点类型`F`(`32F`或`64F`)，`C3`表示采用三个通道(处理彩色图像)。总结起来，矩阵类型特定的语法规则如下：
 
 {% highlight C++ %}
 CV_[The Number of bite per item][Signed or Unsigned][Type Profix]C[The Channel number]
 {% endhighlight %}
 
-比如`CV_8UC3`表示采用8比特/像素通道的三通道无符号字符类型。存在许多其它`Mat`构造方法，但是一开始了解这么多
-已经足够，剩下的可以在编程时再参考文档。更多时候，我们简单地采用`Mat ImageName;`来创建一个图像矩阵。
+需要注意，Mat作为图像容器表现优秀，同时，当其作为一个通用矩阵类时，也可用于创建和处理多维矩阵。但更多的时候，我们只需要采用
+`Mat varname`来创建一个图像容器。
 
 ## 输入图像
 OpenCV采用`imread()`函数来输入图像。其C++接口如下：
@@ -153,6 +199,15 @@ Mat imread(const string& filename, int flags=1 )
 * 大于0 : 返回3通道图像
 * 等于0 : 返回灰度图像
 * 小于0 : 保留原始图像通道数
+
+从前面`Mat`类定义里可以找到成员变量`data`，当成功读取图像时，它指向数据空间地址，当读取错误时，对其赋值`0`，
+于是可以采用下面的方法验证图像是否被正确读入并进行相应处理：
+
+{% highlight C++ %}
+if (!image.data) {
+    // handle the failure
+}
+{% endhighlight %}
 
 更多输入图像的细节包括支持的图像格式等请参考[imread文档](http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread)。
 
@@ -185,6 +240,13 @@ void namedWindow(const string& winname, int flags=WINDOW_AUTOSIZE )
 
 {% highlight C++ %}
 void imshow(const string& winname, InputArray mat)
+{% endhighlight %}
+
+一个完整的窗口创建和图像显示示例如下：
+
+{% highlight C++ %}
+cv::namedWindow("Output Image");
+cv::imshow("Output Image", result);
 {% endhighlight %}
 
 常用于管理窗口显示的函数是`int waitKey(int delay=0)`，当传递参数大于零时，等待指定毫秒后关闭窗口，若小于等于零，一直保持窗口，
