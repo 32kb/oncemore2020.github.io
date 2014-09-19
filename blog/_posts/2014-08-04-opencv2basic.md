@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenCV2 基础操作"
-modified: 2014-08-04 09:42:33 +0800
+modified: 2014-09-19 09:42:33 +0800
 tags: [OpenCV,Computer Visions]
 image:
   feature: homefeature.jpg
@@ -144,6 +144,49 @@ cv::Ptr<IplImage> iplImage = cvLoadImage("c:\\img.jpg");
 {% endhighlight %}
 
 这可以规避C API的手动内存管理，但是应该尽量使用OpenCV2提供的C++ API `cv::Mat`类。
+
+## 引用计数注意事项
+
+引用计数规则允许函数返回`Mat`类型,例如：
+
+{% highlight C++ %}
+cv::Mat function() {
+    // create image
+    cv::Mat ima(240,320,CV_8U,cv::Scalar(100));
+    // return it
+    return ima;
+}
+
+int main(void)
+{
+    //get a gray-level image
+    cv::Mat gray =function();
+}
+{% endhighlight %}
+
+在主函数内调用函数`function()`后，`gray`存储了返回的图像，虽然在`function()`
+执行完毕后局部变量`ima`会被释放，但是仍存在`gray`对数据空间的引用，故图像
+对应的内存空间并不会被释放。
+
+然而，应当注意**不能**直接返回`Mat`类型的类属性，如下典型错误示例：
+
+{% highlight C++ %}
+class Test {
+    //image attribute
+    cv::Mat ima;
+
+    public:
+        //constructor creating a gray-level image
+        Test()  :   ima)(240, 320, CV_8U, cv::Scalar(100)) {}
+        //method return a class attribute, not a good idea...
+        cv::Mat method()    {return ima;}
+}
+{% endhighlight %}
+
+如果调用类方法`method()`进行赋值操作，变量将创建类属性`ima`的软拷贝，如果
+这个变量在之后被修改，类属性同样会被修改，从而造成类行为的变化。为了避免
+这个问题，**总是**创建类属性的硬拷贝。不难发现，这是由于**类**和**函数**的
+作用机制上的区别造成的。
 
 # 图像I/O
 OpenCV将包括图像输入/存储/输出等功能封装进`core`模块中，使用前需要包含头文件：
