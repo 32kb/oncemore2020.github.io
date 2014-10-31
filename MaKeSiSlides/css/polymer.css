@@ -1,0 +1,95 @@
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    core-pages {
+      border: 1px solid black;
+      -webkit-user-select: none;
+      border-radius: 5px;
+    }
+
+    core-pages > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: inherit;
+    }
+
+    core-pages.fancy {
+      border: none;
+      margin-left: 2em;
+    }
+
+    core-pages.fancy > div {
+      opacity: 0;
+      -webkit-transform: translate3d(-100px, 0, 0) scale(0.9);
+      transform: translate3d(-100px, 0, 0) scale(0.9);
+      transition: all 1s cubic-bezier(.03,.56,.7,.98);
+      color: white;
+    }
+
+    core-pages.fancy > div:nth-child(1) {
+      background-color: red;
+    }
+
+    core-pages.fancy > div:nth-child(2) {
+      background-color: green;
+    }
+
+    core-pages.fancy > div:nth-child(3) {
+      background-color: blue;
+    }
+
+    core-pages.fancy > div:nth-child(4) {
+      background-color: purple;
+    }
+
+    core-pages.fancy > div:nth-child(5) {
+      background-color: black;
+    }
+
+    core-pages.fancy .core-selected + div {
+      -webkit-transform: translate3d(100px, 0, 0) scale(0.9);
+      transform: translate3d(100px, 0, 0) scale(1);
+    }
+
+    core-pages.fancy .core-selected {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    core-pages.fancy div.begin {
+      -webkit-transform: translate3d(100px, 0, 0) scale(0.9);
+      transform: translate3d(100px, 0, 0) scale(0.9);
+    }
+
+
+#my-button {
+    background: #4285f4;
+    color: #fff;
+}
+
+#my-button:hover {
+    background: #2a56c6;
+}
+
+#my-button::shadow #ripple {
+    color: #2a56c6;
+}
+core-toolbar {
+  background: #03a9f4;
+  color: black;
+}
+#tabs {
+  width: 100%;
+  margin: 0;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
