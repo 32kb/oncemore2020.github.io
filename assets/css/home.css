@@ -13,7 +13,7 @@
 }
 
 /* Buttons */
-.btn {
+#mybtn {
   font-family: Roboto;
   text-align: center;
   border-radius: 4px;
@@ -21,7 +21,7 @@
   vertical-align: baseline;
   text-decoration: none;
   zoom: 1;
-  border: 2px solid white;
+  border: 2px solid black;
   color: white;
   &:visited {
     color: white;
@@ -51,10 +51,6 @@
 #card{
     margin-left:50%;
     padding: 15px;
+    border-radius: 4px;
     background-image: url(/images/bg-4.jpg);
-}
-
-/*contacts*/
-#contacts{
-    background: url(../../images/abstract-6.jpg);
 }

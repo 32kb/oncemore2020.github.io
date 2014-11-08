@@ -1,7 +1,6 @@
 <!doctype html>
 <html> 
 	<head>
-		<meta charset="utf-8">
 		<title>思墨斋</title>
   		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -9,6 +8,9 @@
         <link rel="stylesheet" href="./assets/css/home.css">
 		<link rel="stylesheet" href="./assets/css/reveal.min.css">
 		<link rel="stylesheet" href="./assets/css/default.css" id="theme">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/css/ripples.min.css" rel="stylesheet">
+        <link href="./assets/css/material-wfont.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -31,11 +33,27 @@
                     </div>
 				</section>
 
+				<section data-background="./images/blogbg.jpg" data-background-transition="slide">
+                    <div class="well">
+                        <p style="color:black; display:inline-block; zoom:1;">乍向西郊斗草过，药栏红日尚婆娑。</p>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="/blog" class="btn btn-success btn-raised" style="padding:15px;" >西郊书院</a>
+                    </div>
+				</section>
+
 				<section data-background="./images/sjtu.jpg" data-background-transition="slide">
-                    <div id="contacts">
-                    <h2>Get In Touch</h2>
-                    <p>Find me at SJTU:</p>
-                    <p>or send me an email:</p>
+                    <div class="panel panel-primary" style="margin-right:50%;margin-top:40%;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Get In Touch</h3>
+                        </div>
+                        <div class="panel-body" style="padding:10px">
+                            <p align="left" style="color:black">到交大来找我:
+                                <a href="http://j.map.baidu.com/kbrpy" style="padding:5px" class="btn btn-info">查看地图</a>
+                            <p align="left" style="color:black">或者发邮件:
+                                <a href="mailto:guanhwang2011@gmail.com?subject=Hello" style="padding:5px" class="btn btn-info">发送</a>
+                        </div>
                     </div>
 				</section>
 
@@ -58,6 +76,15 @@
 			});
 
 		</script>
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="./assets/js/ripples.js"></script>
+        <script src="./assets/js/material.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
 
 	</body>
 </html>
