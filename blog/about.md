@@ -1,27 +1,22 @@
 ---
 layout: page
 permalink: /blog/about/
-title: "about"
-modified: 2014-03-28 22:29
+title: "关于博客站"
+modified: 2014-11-5 22:00
 tags: [about]
 image:
-  feature: 
-  credit: 
-  creditlink: 
-share: 
+  feature:
+share:
 ---
 个人博客，用于记录一些技术笔记和个人心得。
 
-#Projects
+#特别致谢
 <div markdown="0">
-Learning Data Structure in C:<a href="https://github.com/OnceMore2020/Learning.DS.inC" class="btn">On GitHub</a>
-</div>
-
-<div markdown="0">
-My GitHub HomePage(Powered by Jekyll using hpstr-jekyll-theme):<a href="https://github.com/OnceMore2020/oncemore2020.github.io" class="btn">On GitHub</a>
-</div>
-
-#Curriculum Vitae
-<div markdown="0">
-学术交流或招聘请见个人简历：<a href="/assets/pdf/cv.pdf" class="btn btn-info">My Curriculum Vitae</a>
+<a href="http://www.vim.org/" class="btn">Vim</a>
+<a href="http://jekyllrb.com/" class="btn">Jekyll</a>
+<a href="https://pages.github.com/" class="btn">Github Pages</a>
+<a href="http://www.google.com/chrome/" class="btn">Chrome</a>
+<a href="https://github.com/mmistakes/hpstr-jekyll-theme" class="btn">hpstr-jekyll-theme</a>
+<a href="http://nodejs.org/" class="btn">node.js</a>
+<a href="http://gruntjs.com/" class="btn">grunt</a>
 </div>

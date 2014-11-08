@@ -7,20 +7,15 @@ tags: [ToolBox]
 image:
   feature: feature-1.png
   background: triangular.png
-comments: ture 
+comments: turr
 share: true
 ---
 记录我正在使用或打算使用的认为有利于提高工作效率的工具集合。
 
 #操作系统
 <div markdown="0">
-美观易用的基于Ubuntu 12.04 LTS的Linux发行版:
-<a href="http://elementaryos.org/" class="btn btn-success">Elementary OS Luna</a>
-</div>
-
-<div markdown="0">
-有关 Elementary OS Luna 的配置：
-<a href="http://www.reboot2elementary.com/discover-elementaryos/things-to-do/" class="btn btn-success">Elementary OS Luna</a>
+让人专注于学习的Linux:
+<a href="http://www.ubuntu.com/" class="btn btn-success">Ubuntu 14.04 LTS</a>
 </div>
 
 #文本编辑器
