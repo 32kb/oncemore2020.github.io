@@ -164,25 +164,14 @@ body {
 #post,
 #page {
 	.entry-content {
-		margin: 40px 2px 20px 2px;
-		padding: 10px 15px;
+        float:left;
+        margin-top:50px;
+        margin-left:8%;
+		padding: 20px 30px;
 		background-color: $white;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($black,0.1);
 		@include rounded(3px);
-		@media #{$medium} {
-			margin-left: 10px;
-			margin-right: 10px;
-			padding: 20px 30px;
-		}
-		@media #{$large} {
-            float:left;
-			max-width: 60%;
-			margin: 50px 80px 30px ;
-			padding: 50px 80px;
-			> p:first-child {
-				@include font-size(20);
-			}
-		}
+		max-width: 60%;
 	}
 	.entry-meta {
 		margin: 50px 30px 30px;
@@ -212,20 +201,14 @@ body {
 }
 // Read More Module
 .read-more {
+    max-width:20%;
     float:right;
     padding:20px;
-    margin-bottom:50px;
+    margin-top:50px;
+    margin-right:5%;
 	background-color: $white;
 	box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba($black,0.1);
 	@include rounded(3px);
-	@media #{$medium} {
-		margin: 50px 10px 20px 10px;
-		padding: 50px 40px 25px;
-	}
-	@media #{$large} {
-		max-width: 30%;
-		padding: 50px 80px;
-	}
 	text-align: center;
 	@include clearfix;
 }
@@ -236,50 +219,6 @@ body {
 	height: 35px;
 	a {
 		@extend .btn;
-	}
-}
-.read-more-content {
-	@include font-size(16);
-	// Dotted line underlines for links
-	p > a,
-	li > a {
-		border-bottom: 1px dotted lighten($link-color, 50);
-		&:hover {
-			border-bottom-style: solid;
-		}
-	}
-	h3 {
-		margin: 0;
-		@include font-rem(28);
-		a {
-			color: $primary;
-		}
-		@media #{$medium} {
-			@include font-rem(36);
-		}
-	}
-}
-.read-more-list {
-	border-top: solid 1px lighten($base-color,60);
-}
-.list-item {
-	width: 100%;
-	text-align: left;
-	h4 {
-		@include font-rem(18);
-		margin-bottom: 0;
-	}
-	span {
-		display: block;
-		@include font-rem(14);
-		color: lighten($base-color,50);
-	}
-	@media #{$medium} {
-		width: 49%;
-		float: left;
-		&:nth-child(2) {
-			text-align: right;
-		}
 	}
 }
 
