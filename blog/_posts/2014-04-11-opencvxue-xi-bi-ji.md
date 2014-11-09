@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenCV学习笔记"
-tags: [OpenCV,Computer Visions,学习笔记]
+tags: [OpenCV,Computer Visions,TechNotes]
 image:
   feature: feature-cv2.jpg
   background: bg-4.jpg

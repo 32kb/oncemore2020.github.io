@@ -8,7 +8,7 @@
 			<a href="#">文章目录</a>
 			<ul class="dl-submenu">
 				<li><a href="{{ site.url }}/blog/posts/">所有文章</a></li>
-				<li><a href="{{ site.url }}/blog/tags/">所有标签</a></li>
+				<li><a href="{{ site.url }}/blog/tags/">标签归档</a></li>
 			</ul>
 		</li>
 		{% for link in site.links %}<li>{% if link.external %}<a href="{{ link.url }}">{{ link.title }}</a>{% else %}<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>{% endif %}</li>{% endfor %}

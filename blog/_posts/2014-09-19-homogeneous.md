@@ -18,7 +18,9 @@ share: true
 在欧式空间里，两条共面的平行线无法相交，然而在**投影空间(Projective Space)**内却不是这样，
 一个感性的理解是，如下图中的两条铁轨的间距随着视线变远而减小，直至在地平线处(无限远点)相交。
 
-![RailWay](/images/homogeneous/railway.jpg)
+<figure>
+	<a href="/images/homogeneous/railway.jpg"><img src="/images/homogeneous/railway.jpg" alt=""></a>
+</figure>
 
 欧式空间采用$$(x,y,z)$$来表示一个三维点，但是无穷远点$$(\infty,\infty,\infty)$$在欧式空间里是没有意义的,
 但是在投影空间中进行图形和几何运算并不是一个简单的问题，为了解决这个问题，

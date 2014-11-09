@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "基于Haar小波特征的AdaBoost级联器:OpenCV实现"
+title: "Haar/AdaBoost级联器:OpenCV实现"
 modified: 2014-04-14 13:08:38 +0800
-tags: [OpenCV,Computer Visions,学习笔记]
+tags: [OpenCV,Computer Visions,TechNotes]
 image:
   feature: feature-cv2.jpg
   background: bg-4.jpg

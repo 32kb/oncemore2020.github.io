@@ -2,7 +2,7 @@
 layout: post
 title: "How To Read A Paper"
 modified: 2014-06-24 14:47:04 +0800
-tags: [心法]
+tags: [Tao]
 image:
   feature: paper.png
 comments: true

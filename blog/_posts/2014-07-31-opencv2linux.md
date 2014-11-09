@@ -2,7 +2,7 @@
 layout: post
 title: "快速开始学习OpenCV"
 modified: 2014-07-31 12:12:24 +0800
-tags: [OpenCV,Computer Visions]
+tags: [OpenCV,Computer Visions,handbook]
 image:
   feature: homefeature.jpg
 comments: true

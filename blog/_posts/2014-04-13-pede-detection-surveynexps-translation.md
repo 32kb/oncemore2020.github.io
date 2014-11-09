@@ -2,7 +2,7 @@
 layout: post
 title: "综述翻译:Monocular Pedestrian Detection:Survey and Experiments"
 modified: 2014-04-13 22:10:48 +0800
-tags: [Computer Visions,论文翻译]
+tags: [Computer Visions]
 image:
   feature: feature-cv2.jpg
   background: bg-4.jpg

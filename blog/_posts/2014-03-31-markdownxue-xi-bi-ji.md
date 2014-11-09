@@ -2,7 +2,7 @@
 layout: post
 title: "Markdown学习笔记"
 modified: 2014-03-31 20:42:37 +0800
-tags: [markdown,学习笔记,参考]
+tags: [markdown,handbook]
 image:
   feature: feature-1.png
   background: bg-3.jpg

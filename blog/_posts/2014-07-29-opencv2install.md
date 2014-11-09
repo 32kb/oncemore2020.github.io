@@ -2,7 +2,7 @@
 layout: post
 title: "在Ubuntu中安装OpenCV2"
 modified: 2014-07-29 23:24:19 +0800
-tags: [OpenCV,Computer Visions]
+tags: [OpenCV,Computer Visions,handbook]
 image:
   feature: homefeature.jpg
 comments:  true

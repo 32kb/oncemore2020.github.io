@@ -2,7 +2,7 @@
 layout: post
 title: "Relearning C in a comprehensive way"
 modified: 2014-04-03 09:45:16 +0800
-tags: [C语言,重新修炼]
+tags: [C/C++]
 image:
   feature: feature-3.jpg
   background: bg-3.jpg
