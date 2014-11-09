@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://localhost:4000</loc>
+    </url>
+
+    
+    <url>
+        <loc>http://localhost:4000/404.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/about/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/feed.xml</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/assets/css/main.css</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/posts/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/sitemap.xml</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/tags/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/page2/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/page3/index.html</loc>
+    </url>
+    
+
+    
+    <url>
+        <loc>http://localhost:4000/blog/opencv2scan/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/homogeneous/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/opencv2basic/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/opencv2linux/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/opencv2install/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/how-to-read-a-paper/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/hognote/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/haar-cascader-using-opencv/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/pede-detection-surveynexps-translation/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/opencvxue-xi-bi-ji/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/knr-chap1/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/relearning-c-in-a-comprehensive-way/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/blog/markdownxue-xi-bi-ji/</loc>
+    </url>
+    
+</urlset>
