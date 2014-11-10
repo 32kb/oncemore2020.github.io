@@ -211,6 +211,9 @@ body {
 	@include rounded(3px);
 	text-align: center;
 	@include clearfix;
+	@media screen and (max-width: 750px) {
+        display:none;
+    }
 }
 .read-more-header {
 	top: -20px;
@@ -220,6 +223,9 @@ body {
 	a {
 		@extend .btn;
 	}
+	@media screen and (max-width: 750px) {
+        display:none;
+    }
 }
 
 // Post Index
