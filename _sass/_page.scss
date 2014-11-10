@@ -125,6 +125,9 @@ body {
 		min-width: 50%;
 		min-height: 50%;
 	}
+	@media screen and (max-width: 750px) {
+        /*TODO: make it fly in mobile screen*/
+    }
 }
 
 // Single Post and Page
@@ -173,7 +176,11 @@ body {
 		@include rounded(3px);
 		max-width: 60%;
 	    @media screen and (max-width: 750px) {
-            max-width:100%;
+            max-width:95%;
+            float:none;
+            margin-left:auto;
+            margin-right:auto;
+
         }
 	}
 	.entry-meta {
