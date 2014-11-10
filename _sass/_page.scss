@@ -172,6 +172,9 @@ body {
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($black,0.1);
 		@include rounded(3px);
 		max-width: 60%;
+	    @media screen and (max-width: 750px) {
+            max-width:100%;
+        }
 	}
 	.entry-meta {
 		margin: 50px 30px 30px;
