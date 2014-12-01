@@ -6,6 +6,9 @@
 body{
     background-image: url(../../images/bg-5.png);
 }
+p{
+    font-family:"微软雅黑","Arial","Helvetica","sans-serif";
+}
 #card{
     margin-left : auto;
     margin-right : auto;
@@ -43,7 +46,7 @@ var canvas = d3.select("body").append("canvas")
 <script>
 var width = 1000,
     height = 550;
-var sample = bestCandidateSampler(width, height, 10, 10000),
+var sample = bestCandidateSampler(width, height, 10, 20000),
     samples = [],
     s;
 while (s = sample()) samples.push(s);
