@@ -1,0 +1,181 @@
+<!doctype html>
+
+<head>
+    <title>Hello Polymer!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="device-width,initial-scale=1" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <script src="components/platform/platform.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ripples.min.css" rel="stylesheet">
+    <link href="css/polymer.css" rel="stylesheet">
+    <link href="css/material-wfont.min.css" rel="stylesheet">
+    <!--将element导入ＨＴＭＬ-->
+    <link rel="import" href="components/paper-button/paper-button.html">
+    <link rel="import" href="components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="components/core-pages/core-pages.html">
+    <link rel="import" href="components/paper-toggle-button/paper-toggle-button.html">
+</head>
+
+<body>
+    <div class="setbg">
+    </div>
+<div id="impress">
+	<div class="step slide" data-x="-1000" data-y="500">
+        <p>基本按钮</p>
+        <paper-button id="my-button">Test</paper-button>
+        <paper-button raisedButton>Test</paper-button>
+        <br></br>
+        <p>展示卡片</p>
+        <core-pages id="core-pages1" style="width:650px;height:400px" class="fancy" selected="0" notap>
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+        </core-pages>
+    </div>
+
+	<div class="step" data-x="-2000" data-y="500">
+        <div class="jumbotron">
+        <h1>基本展示卡片２</h1>
+        <p>容纳信息</p>
+        </div>
+    </div>
+
+    <div class="step" data-x="-2000" data-y="1500">
+        <div class="jumbotron">
+            <h1>显示统计信息</h1>
+            <div class="progress progress-striped">
+                 <div class="progress-bar progress-bar-info" style="width: 20%"></div>
+            </div>
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+            </div>
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+            </div>
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="step" data-x="-1000" data-y="1500">
+        <div class="jumbotron">
+            <h1>小卡片</h1>
+                <div class="alert alert-dismissable alert-warning">
+                    <h3>警告信息</h3>
+                    <a href="javascript:void(0)" class="alert-link">警告链接</a>
+                </div>
+                <div class="alert alert-dismissable alert-danger">
+                    <h3>危险信息</h3>
+                    <p>基本内容</p>
+                </div>
+                <div class="alert alert-dismissable alert-success">
+                    <h3>好消息</h3>
+                    <p>基本内容</p>
+                </div>
+                <div class="alert alert-dismissable alert-info">
+                    <h3>通知</h3>
+                    <p>基本内容</p>
+                </div>
+        </div>
+    </div>
+    <div class="step" data-x="0" data-y="1500">
+        <div class="jumbotron">
+            <h1>标签切换</h1>
+            <core-toolbar>
+                <paper-tabs id="tabs" selected="all" self-end>
+                    <paper-tab name="tab1">标签1</paper-tab>
+                    <paper-tab name="tab2">标签2</paper-tab>
+                </paper-tabs>
+            </core-toolbar>
+            <div class="jumbotron" id="divtab1">
+                <h1>这是标签１的内容</h1>
+            </div>
+            <div class="jumbotron" style="display:none;" id="divtab2">
+                <h1>这是标签２的内容</h1>
+            </div>
+        </div>
+    </div>
+    <div class="step" data-x="0" data-y="2500">
+        <div class="jumbotron">
+            <h1>表格</h1>
+            <table class="table table-striped table-hover ">
+                <thead>
+                    <tr>
+                        <th><h3>#</h3></th>
+                        <th><h3>Col1</h3></th>
+                        <th><h3>Col2</h3></th>
+                        <th><h3>Col3</h3></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="success">
+                        <td><h3>1</h3></td>
+                        <td><h3>Column content</h3></td>
+                        <td><h3>Column content</h3></td>
+                        <td><h3>Column content</h3></td>
+                    </tr>
+                    <tr class =danger>
+                        <td><h3>2</h3></td>
+                        <td><h3>Column content</h3></td>
+                        <td><h3>Column content</h3></td>
+                        <td><h3>Column content</h3></td>
+                    </tr>
+                    <tr class="info">
+                        <td><h3>3</h3></td>
+                        <td><h3>Column content</h3></td>
+                        <td><h3>Column content</h3></td>
+                        <td><h3>Column content</h3></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+</div>
+
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ripples.min.js"></script>
+        <script src="js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+<script>
+  var tabs = document.querySelector('paper-tabs');
+  tabs.addEventListener('core-select', function() {
+        var card1 = document.getElementById('divtab1');
+        var card2 = document.getElementById('divtab2');
+        if(tabs.selected=="tab1"){
+        card1.style.display="block";
+        card2.style.display="none";
+        }
+        else
+        {
+            card1.style.display="none";
+            card2.style.display="block";
+        }
+  });
+</script>
+<script>
+    document.querySelector('#core-pages1').onclick = function(e) {
+      this.selected = (this.selected + 1) % this.items.length;
+      this.async(function() {
+        if (this.selectedIndex == 0) {
+          this.selectedItem.classList.remove('begin');
+        } else if (this.selectedIndex == this.items.length - 1) {
+          this.items[0].classList.add('begin');
+        }
+      });
+    };
+</script>
+</body>
+</html>
