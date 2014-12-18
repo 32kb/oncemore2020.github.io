@@ -3,14 +3,13 @@
     "name":"root.Jobs.GXZ",
     "imports":
     [
-      "root.GXZ.DTB",
       "root.GXZ.WGH",
       "root.GXZ.LCX",
       "root.GXZ.ZZH"
     ]
     },
-    {"name":"root.GXZ.DTB","imports":[]},
     {"name":"root.GXZ.WGH", "imports":[]},
     {"name":"root.GXZ.LCX","imports":["root.GXZ.WGH"]},
-    {"name":"root.GXZ.ZZH", "imports":[]}
+    {"name":"root.GXZ.ZZH", "imports":["root.Jobs.XJP"]},
+    {"name":"root.Jobs.XJP", "imports":[]}
 ]
