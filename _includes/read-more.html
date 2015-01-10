@@ -3,15 +3,15 @@
     <hr>
     <div class="read-more-header">
         <a href="{{ site.url }}/blog/posts" class="read-more-btn">更多文章</a>
-    </div><!-- /.read-more-header -->
+    </div>
     <hr>
     {% for post in site.related_posts limit:5 offset:1 %}
-      <div align="left">
+    <div align="left">
         <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
-      </div><!-- /.list-item -->
+    </div>
     {% endfor %}
     <hr>
     <div class="read-more-header">
-      <a href="{{ site.url }}{{ page.previous.url }}" class="read-more-btn">手气不错</a>
-    </div><!-- /.read-more-header -->
-</div><!-- /.read-more -->
+        <a href="{{ site.url }}{{ page.previous.url }}" class="read-more-btn">手气不错</a>
+    </div>
+</div>
