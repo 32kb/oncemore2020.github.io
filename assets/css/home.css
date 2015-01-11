@@ -26,3 +26,15 @@
 	width: 300px;
 	height: 300px;
 }
+#contact{
+    width:40%;
+}
+@media screen and (max-width: 750px) {
+    #contact{
+        width:100%;
+        font-size:40px;
+    }
+    #recv{
+        margin-bottom:60px;
+    }
+}
