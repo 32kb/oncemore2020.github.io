@@ -8,13 +8,14 @@
         <link rel="stylesheet" href="./assets/css/home.css">
 		<link rel="stylesheet" href="./assets/css/reveal.min.css">
 		<link rel="stylesheet" href="./assets/css/reveal-default.css" id="theme">
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="./assets/css/ripples.min.css" rel="stylesheet">
         <link href="./assets/css/material-wfont.css" rel="stylesheet">
         <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
         <meta name="baidu-site-verification" content="6hXfBGadpt" />
+        <link href="./assets/css/snackbar.css" rel="stylesheet">
 	</head>
-	<body>
+	<body onload="OK()">
 		<div class="reveal">
 			<div class="slides">
                 <section>
@@ -42,19 +43,42 @@
                     </div>
                     <div style="float:center; margin-top:20px;" id="circle">
                         <p style="font-size: 30px;"><br>Read,Think<br><br><br><br>Code,Drink</p>
-                        </div>
+                    </div>
+                    <div style="float:right">
+                        <a href="" class="navigate-right btn btn-success btn-fab btn-raised mdi-navigation-arrow-forward"></a>
+                    </div>
 				</section>
 
-				<section data-background="./images/blogbg.jpg" data-background-transition="slide">
-                    <div class="well">
-                        <p style="color:black; display:inline-block; zoom:1;">乍向西郊斗草过，药栏红日尚婆娑。</p>
+                <section data-background="#212121" data-background-transition="zoom">
+                    <div>
+                        <a href="/blog" class="btn btn-primary btn-raised" style="padding:15px;" >西郊书院</a>
                     </div>
                     <br>
-                    <div>
-                        <a href="/blog" class="btn btn-success btn-raised" style="padding:15px;" >西郊书院</a>
+                    <iframe id="BlogD3" src="" style="width:100%;height:502px;" allowTransparency="true" margin-width="0" scrolling="no" margin-height="0"></iframe>
+                    <br>
+                    <div style="float:left">
+                        <a href="" class="navigate-left btn btn-danger btn-fab btn-raised mdi-navigation-arrow-back"></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="" class="navigate-right btn btn-success btn-fab btn-raised mdi-navigation-arrow-forward"></a>
                     </div>
 				</section>
 
+                <section data-background="./images/bg_avatar.jpg" data-background-transition="zoom">
+                    <div class="well" style="width:40%; text-align:center; margin-right:auto; margin-left:auto;">
+                        <p>保持联络</p>
+                        <hr>
+                    <div class="well" style="width:100%">
+                        <p>获取明信片<a href="mailto:guanhwang@outlook.com?subject=保持联络&body=请在下面填写你的收取地址然后发送邮件" class="btn btn-info btn-fab btn-raised mdi-content-create"></a></p>
+                    </div>
+                    <div class="well" style="width:100%">
+                        <p>给我寄信？<button class="btn btn-warning btn-fab btn-raised mdi-content-create" data-content="上海市闵行区东川路800号上海交通大学闵行校区蓁蓁楼(200240)王官皓" data-toggle="snackbar" data-timeout="0"></button></p>
+                    </div>
+                    <div style="float:left">
+                        <a href="" class="navigate-left btn btn-danger btn-fab btn-raised mdi-navigation-arrow-back"></a>
+                    </div>
+                    </div>
+				</section>
 			</div>
 		</div>
 
@@ -66,7 +90,7 @@
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: false,
-				progress: true,
+                progress: false,
 				history: true,
 				center: true,
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
@@ -75,13 +99,19 @@
 
 		</script>
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="./assets/js/plugins/bootstrap.min.js"></script>
         <script src="./assets/js/plugins/ripples.js"></script>
         <script src="./assets/js/plugins/material.js"></script>
+        <script src="./assets/js/plugins/snackbar.min.js"></script>
         <script>
             $(document).ready(function() {
                 $.material.init();
             });
+        </script>
+        <script>
+            function OK(){
+                document.getElementById('BlogD3').src= "./d3/blog.html";
+            }
         </script>
 
 	</body>

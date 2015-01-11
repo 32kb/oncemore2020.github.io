@@ -34,6 +34,14 @@ body {
   font-family: 'FontAwesome';
   font-style: normal;
 }
+.reveal .btn-fab {
+    font-family: 'Material-Design-Icons';
+    font-style: normal;
+    font-variant:normal;
+    font-weight:bold;
+    line-height:1;
+    font-size:large;
+}
 /*********************************************
  * HEADERS
  *********************************************/
