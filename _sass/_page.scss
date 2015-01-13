@@ -12,7 +12,7 @@ body {
 	@include clearfix;
 }
 .entry-content {
-	@include font-size(16);
+	@include font-size(20);
 	// Dotted line underlines for links
 	p > a,
 	li > a {
@@ -180,7 +180,6 @@ body {
             float:none;
             margin-left:auto;
             margin-right:auto;
-
         }
 	}
 	.entry-meta {
