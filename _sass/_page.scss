@@ -175,7 +175,7 @@ body {
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($black,0.1);
 		@include rounded(3px);
 		max-width: 60%;
-	    @media screen and (max-width: 1050px) {
+	    @media screen and (max-width: 1250px) {
             max-width:95%;
             float:none;
             margin-left:auto;
@@ -220,7 +220,7 @@ body {
 	@include rounded(3px);
 	text-align: center;
 	@include clearfix;
-	@media screen and (max-width: 1050px) {
+	@media screen and (max-width: 1250px) {
        max-width:95%;
        float:none;
        margin-left:auto;
