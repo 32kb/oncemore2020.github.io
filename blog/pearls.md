@@ -8,6 +8,7 @@ title: 珠玑
 <a href="https://developers.google.com/edu/python/" class="btn btn-success">Google's Python Class</a>
 <a href="http://www.pythondoc.com/pythontutorial27/" class="btn btn-info">Python入门指南(2.7)</a>
 <a href="http://www.pythondoc.com/pythontutorial3/index.html" class="btn btn-danger">Python入门指南(3.4)</a>
+<a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000" class="btn btn-warning">廖雪峰的Python教程</a>
 </div>
 
 #Visions
@@ -16,5 +17,4 @@ title: 珠玑
 <a href="http://www.stat.ucla.edu/~sczhu/research_blog.html" class="btn btn-danger">Research:Are we on the right way?</a>
 <a href="http://dahua.me/research.html" class="btn btn-info">Dahua Lin</a>
 </div>
-
 
