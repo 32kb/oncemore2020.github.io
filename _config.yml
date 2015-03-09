@@ -1,4 +1,5 @@
 title:            OnceMore
+description:      一个工科男与发际线斗争的故事
 reading_time:     true
 words_per_minute: 60
 #url:              http://localhost:4000
@@ -6,7 +7,7 @@ url:              http://oncemore2020.github.io
 
 # Owner/author information
 owner:
-  name:           OnceMore
+  name:           王思墨
   email:          guanhwang2011@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   weibo:          2615146412
