@@ -210,8 +210,7 @@ body {
 }
 // Side Nav Module
 .side-nav {
-    position: fixed;
-    right: 5px;
+    float:right;
     max-width:25%;
     padding:20px;
     margin-top:50px;
@@ -219,8 +218,12 @@ body {
 	background-color: $white;
 	box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba($black,0.1);
 	@include rounded(3px);
-	text-align: center;
 	@include clearfix;
+    li {
+        margin-bottom:12px;
+        word-break:break-all;
+    }
+    ul {list-style:none;}
 	@media screen and (max-width: 1250px) {
        max-width:95%;
        float:none;
@@ -228,6 +231,15 @@ body {
        margin-right:auto;
     }
 }
+
+/**************menuIndex style************/
+#menuIndex {overflow:auto;}
+#menuIndex a {display:block;padding:2px 0;}
+#menuIndex a:hover {text-decoration:none;}
+#menuIndex ul li {font-size:12px;margin-bottom:5px;word-wrap:break-word;padding-left:10px;}
+#menuIndex ul li.on {background-color:#e0e0e0;}
+#menuIndex li.h1 {font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
+#menuIndex li.h3 {padding-left:25px;}
 
 // Post Index
 // --------------------------------------------------
