@@ -1,18 +1,5 @@
 $(document).ready(function(){
 
-    $('.entry-content a').each(function(index, element) {
-        var href = $(this).attr('href');
-        if (href) {
-            if (href.indexOf('#') == 0) {
-            } else if (href.indexOf('/') == 0 || href.toLowerCase().indexOf('oncemore2020.github.io') > -1) {
-            } else if ($(element).has('img').length) {
-            } else {
-                $(this).attr('target', '_blank');
-                $(this).addClass('external');
-            }
-        }
-    });
-
     (function() {
         var ie6_8 = !$.support.leadingWhitespace;
 
@@ -55,7 +42,6 @@ $(document).ready(function(){
 
         function genMenuIndexHTML() {
             var menuIndexHTML = '<ul>';
-
             var heading = initHeading();
             var h2 = heading.h2;
             var h3 = heading.h3;
@@ -70,7 +56,6 @@ $(document).ready(function(){
                 }
             }
             menuIndexHTML += '</ul>';
-
             return menuIndexHTML;
         }
 
@@ -78,15 +63,12 @@ $(document).ready(function(){
             var menuIndexHTML = genMenuIndexHTML();
             var indexCon = '<div id="menuIndex" class="side-nav"></div>';
             $('#art').append(indexCon);
-
             $('#menuIndex')
                 .append($(menuIndexHTML))
                 .delegate('a', 'click', function(e) {
                     e.preventDefault();
-
                     var selector = $(this).attr('data-id') ? '#' + $(this).attr('data-id') : 'h1';
                     var scrollNum = (selector == '#top') ? 0 : $(selector).offset().top - 30;
-
                     $('body, html').animate({scrollTop: scrollNum}, 400, 'swing');
                 });
         }
@@ -129,8 +111,8 @@ $(document).ready(function(){
                         if (nowTop + 20 > menuIndexTop) {
                             $('#menuIndex').css({
                                 position:'fixed',
-                                top:'25px',
-                                right:'5px'
+                                top:'50px',
+                                right:'2px'
                             });
                         } else {
                             $('#menuIndex').css({
