@@ -215,31 +215,44 @@ body {
     padding:20px;
     margin-top:50px;
     margin-right:5%;
-	background-color: $white;
-	box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba($black,0.1);
-	@include rounded(3px);
-	@include clearfix;
+    background-color: $white;
+    box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba($black,0.1);
+    @include rounded(3px);
+    @include clearfix;
     li {
         margin-bottom:12px;
         word-break:break-all;
     }
     ul {list-style:none;}
-	@media screen and (max-width: 1250px) {
-       max-width:95%;
-       float:none;
-       margin-left:auto;
-       margin-right:auto;
+    @media screen and (max-width: 1250px) {
+        display:none;
     }
 }
 
-/**************menuIndex style************/
-#menuIndex {overflow:auto;}
-#menuIndex a {display:block;padding:2px 0;}
-#menuIndex a:hover {text-decoration:none;}
-#menuIndex ul li {font-size:12px;margin-bottom:5px;word-wrap:break-word;padding-left:10px;}
-#menuIndex ul li.on {background-color:#e0e0e0;}
-#menuIndex li.h1 {font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
-#menuIndex li.h3 {padding-left:25px;}
+// Menu Index
+// --------------------------------------------------
+#menuIndex
+{
+    overflow:auto;
+    a {
+        display:block;
+        padding:2px 0;
+    }
+    ul li {
+        margin-bottom:5px;
+        word-wrap:break-word;
+    }
+    ul li.on {
+        background-color:#e0e0e0;
+    }
+    li.h1 {
+        padding-left:0;
+        margin-bottom:10px;
+    }
+    li.h3 {
+    padding-left:25px;
+    }
+}
 
 // Post Index
 // --------------------------------------------------

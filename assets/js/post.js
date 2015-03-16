@@ -129,7 +129,7 @@ $(document).ready(function(){
                         if (nowTop + 20 > menuIndexTop) {
                             $('#menuIndex').css({
                                 position:'fixed',
-                                top:'25px',
+                                top:'50px',
                                 right:'5px'
                             });
                         } else {

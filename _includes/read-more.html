@@ -1,7 +1,8 @@
-<div class="side-nav">
+<div class="side-nav" style="text-align:center">
     <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=2615146412&verifier=c63cf5f5&dpc=1"></iframe>
     <hr>
         <a href="{{ site.url }}/blog/posts" class="btn" style="margin-bottom:0px;">更多文章</a>
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn btn-success" style="margin-bottom:0px;">手气不错</a>
     <hr>
     {% for post in site.related_posts limit:5 offset:1 %}
     <div align="left">
@@ -9,5 +10,4 @@
     </div>
     {% endfor %}
     <hr>
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn btn-success" style="margin-bottom:0px;">手气不错</a>
 </div>
