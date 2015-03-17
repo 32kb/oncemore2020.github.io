@@ -149,12 +149,12 @@ $(document).ready(function(){
                     menuIndexTop = $('#menuIndex').offset().top;
 
                     $(window).trigger('scroll');
-                    $('#menuIndex').css('max-height', $(window).height() - 80);
+                    $('#menuIndex').css('max-height', $(window).height() - 40);
                 });
             })
 
             //用js计算屏幕的高度
-            $('#menuIndex').css('max-height', $(window).height() - 80);
+            $('#menuIndex').css('max-height', $(window).height() - 40);
         }
     })();
 });
