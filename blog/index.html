@@ -1,0 +1,72 @@
+---
+layout: default
+title: Free the ideas
+---
+
+<div id="content">
+{% for post in paginator.posts %}
+<div class="entry">
+  <header>
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span>
+      {% if site.reading_time %}
+      <span class="entry-reading-time pull-right">
+        <i class="fa fa-clock-o"></i>
+        {% assign readtime = post.content | number_of_words | divided_by:site.words_per_minute %}
+        阅读时间 ~{% if readtime <= 1 %}1 分钟{% else %}{{ readtime }} 分钟{% endif %}
+      </span>
+      {% endif %}
+    </div>
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+  </header>
+  <div class="entry-content">
+    {{ post.description }}
+  </div>
+</div>
+{% endfor %}
+</div>
+
+<nav style=" text-align:center;margin-left:auto; margin-right:auto;"><ul class="pagination pagination-lg">
+    <li>
+    {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+            <a href="{{ site.url }}/blog/" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        {% else %}
+            <a href="{{ site.url }}/blog/page{{ paginator.previous_page }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        {% endif %}
+        {% else %}
+            <span aria-hidden="true">&laquo;</span>
+    {% endif %}
+    </li>
+
+    <li>
+        {% if paginator.page == 1 %}
+            <span class="current-page">1</span>
+        {% else %}
+            <a href="{{ site.url }}/blog">1</a>
+        {% endif %}
+    </li>
+    {% for count in (2..paginator.total_pages) %}
+        <li>
+            {% if count == paginator.page %}
+                <span class="current-page">{{ count }}</span>
+            {% else %}
+                <a href="{{ site.url }}/blog/page{{ count }}">{{ count }}</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+
+    <li>
+    {% if paginator.next_page %}
+        <a href="{{ site.url }}/blog/page{{ paginator.next_page }}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    {% else %}
+        <span aria-hidden="true">&raquo;</span>
+    {% endif %}
+    </li>
+</ul></nav>

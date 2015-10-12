@@ -1,0 +1,19 @@
+---
+layout: default
+permalink: /blog/posts/
+title: 所有文章
+description: "An archive of posts."
+---
+<div id="content">
+{% for post in site.posts %}
+    {% if forloop.first %}
+    <article class="entry">
+    <ul>
+    {% endif %}
+    <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    {% if forloop.last %}
+    </ul>
+    </article>
+    {% endif %}
+{% endfor %}
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+        {% include header.html %}
+        <div id="content">
+        <article class="entry">
+            <header>
+            <div class="list-group-item">
+                <th><h1 class="list-group-item-heading">{{ page.title }}</h1></th>
+            </tr></div>
+            <div class="list-group-item">
+                <i class="fa fa-calendar"> {{ page.modified|date:"%Y-%m-%d" }}</i>
+            </tr></div><hr>
+            </header>
+            <div id="toc"></div>
+            <div class="maintext">
+            {{ content }}
+            </div>
+            <!--有言评论插件-->
+            <div id="uyan_frame" style="margin-top:50px;"></div>
+            <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1955791"></script>
+            <!--有言评论插件-->
+        </article></div>
+        {% include js.html %}
+        <!--博客侧边栏目录-->
+        <script src="/assets/js/toc.min.js"></script>
+        <script>
+            $('#toc').toc();
+        </script>
+        <!--博客侧边栏目录-->
+    </body>
+</html>
