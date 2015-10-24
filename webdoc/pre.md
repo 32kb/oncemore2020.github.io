@@ -1,36 +1,24 @@
 ---
-layout: post
+layout: default
 title: OnceMore
 ---
-<div class="jumbotron" style="background-color: #151515;">
+<div class="jumbotron" style="background-color: #00cc99;">
     <div class="container" style="margin-top:50px;">
-    <h1>Hello, Nonsense</h1>
-    <p>一个很无聊的工科男</p>
+    <h1>网页前端技术组</h1>
+    <p>课前准备</p>
     </div>
 </div>
-<div id="content" class="row">
-    <div class="col-md-6">
+<div id="content">
     <div class="panel panel-primary">
-        <div class="panel-heading">博客</div>
+        <div class="panel-heading">第一次课:Linux基础</div>
         <div class="panel-body">
-            <p>主要是一些技术笔记，主题包括:
-            <span class="label label-danger">图像处理和视觉计算</span>
-            <span class="label label-primary">Linux</span>
-            <span class="label label-warning">C/C++</span>
-            <span class="label label-info">Python</span></p>
-            <a class="btn btn-primary" href="http://oncemore2020.gitcafe.io/blog">查看文章</a>
-        </div>
-    </div></div>
-    <div class="col-md-6">
-    <div class="panel panel-success">
-        <div class="panel-heading">读书</div>
-        <div class="panel-body">
-            <p>读书的过程中记录的一些有益的、有用的、有趣的东西。目前正在整理的书籍:</p>
             <ul class="list-group">
-                <li class="list-group-item">A Game Of thrones</li>
-                <li class="list-group-item">Clean Code</li>
+                <li class="list-group-item">阅读:<a href="http://my.oschina.net/arvinjones/blog/139488">什么是Linux?</a></li>
+                <li class="list-group-item">下载:<a href="http://download.virtualbox.org/virtualbox/5.0.8/VirtualBox-5.0.8-103449-Win.exe">VirtualBox-Installer</a></li>
+                <li class="list-group-item">安装VirtualBox确保能正常启动</li>
+                <li class="list-group-item">下载:<a href="ftp://ftp.sjtu.edu.cn/ubuntu-cd/14.04.3/ubuntu-14.04.3-desktop-amd64.iso">Ubuntu安装镜像</a></li>
+                <li class="list-group-item">阅读:<a href="https://en.wikipedia.org/wiki/Everything_is_a_file"></a>Everything is a file</li>
             </ul>
-            <a class="btn btn-success" href="http://oncemore2020.gitcafe.io/books">进入笔记</a>
         </div>
-    </div></div>
+    </div>
 </div>
