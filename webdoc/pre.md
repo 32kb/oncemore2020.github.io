@@ -17,7 +17,7 @@ title: 课前准备
                 <li class="list-group-item">下载:<a href="http://download.virtualbox.org/virtualbox/5.0.8/VirtualBox-5.0.8-103449-Win.exe">VirtualBox-Installer</a></li>
                 <li class="list-group-item">安装VirtualBox确保能正常启动</li>
                 <li class="list-group-item">下载:<a href="ftp://ftp.sjtu.edu.cn/ubuntu-cd/14.04.3/ubuntu-14.04.3-desktop-amd64.iso">Ubuntu安装镜像</a></li>
-                <li class="list-group-item">阅读:<a href="https://en.wikipedia.org/wiki/Everything_is_a_file"></a>Everything is a file</li>
+                <li class="list-group-item">阅读:<a href="https://en.wikipedia.org/wiki/Everything_is_a_file">Everything is a file</a></li>
             </ul>
         </div>
     </div>
