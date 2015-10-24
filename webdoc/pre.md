@@ -1,6 +1,6 @@
 ---
 layout: default
-title: OnceMore
+title: 课前准备
 ---
 <div class="jumbotron" style="background-color: #00cc99;">
     <div class="container" style="margin-top:50px;">
