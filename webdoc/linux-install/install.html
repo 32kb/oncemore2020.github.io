@@ -52,7 +52,7 @@
     <body class="">
         <!-- body:start -->
         
-    <div class="book" data-level="1.2" data-basepath=".." data-revision="Sat Oct 24 2015 02:18:14 GMT+0000 (UTC)">
+    <div class="book" data-level="1.2" data-basepath=".." data-revision="Mon Oct 26 2015 01:22:42 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -228,6 +228,27 @@
 <p><img src="pics/virtualbox-welcome.PNG" alt="virtualbox-welcome"></p>
 <p><code>Ctrl+G</code>&#x6253;&#x5F00;&#x5168;&#x5C40;&#x8BBE;&#x5B9A;&#xFF0C;&#x5C06;<code>&#x9ED8;&#x8BA4;&#x865A;&#x62DF;&#x7535;&#x8111;&#x4F4D;&#x7F6E;</code>&#x4FEE;&#x6539;&#x5230;&#x7A7A;&#x95F2;&#x7A7A;&#x95F4;&#x8F83;&#x591A;&#x7684;&#x5206;&#x533A;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x5185;</p>
 <p><img src="pics/virtualbox-setting.PNG" alt="virtualbox-setting"></p>
+<p><strong>2015-10-26 Troubleshooting</strong>:&#x5BF9;&#x4E8E;&#x4E0D;&#x80FD;&#x5B89;&#x88C5;&#x6216;&#x6B63;&#x5E38;&#x4F7F;&#x7528;VirtualBox&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x603B;&#x7ED3;&#x5982;&#x4E0B;:</p>
+<ol>
+<li><p>&#x4E0D;&#x80FD;&#x65B0;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#x6216;&#x65B0;&#x5EFA;&#x4E86;&#x65E0;&#x6CD5;&#x8FD0;&#x884C;:&#x7834;&#x89E3;&#x4E86;windows&#x7CFB;&#x7EDF;&#x4E3B;&#x9898;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x7684;uxtheme.dll&#x6587;&#x4EF6;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x8FD9;&#x4E2A;bug&#x9996;&#x5148;&#x8981;&#x602A;Microsoft&#xFF0C;&#x8BBE;&#x8BA1;&#x4E86;&#x4E00;&#x5957;&#x590D;&#x6742;&#x800C;&#x53C8;&#x7CDF;&#x7CD5;&#x7684;&#x4E3B;&#x9898;&#x5B9A;&#x5236;&#x7CFB;&#x7EDF;&#xFF1B;&#x5176;&#x6B21;&#x8981;&#x602A;Oracle&#xFF0C;&#x6CA1;&#x6709;&#x8003;&#x8651;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x4E0E;&#x5176;&#x9EBB;&#x70E6;&#x5730;&#x6062;&#x590D;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5EFA;&#x8BAE;&#x6362;&#x7528;vmware&#x4F5C;&#x4E3A;&#x865A;&#x62DF;&#x673A;&#x3002;</p>
+<blockquote>
+<p>&#x53C2;&#x8003;:</p>
+<ul>
+<li><a href="https://www.virtualbox.org/ticket/13504?cversion=1&amp;cnum_hist=1" target="_blank">Ticket #13504:Unable to load R3 module</a></li>
+</ul>
+</blockquote>
+</li>
+<li><p>&#x53EA;&#x80FD;&#x521B;&#x5EFA;32&#x4F4D;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x4E14;&#x6027;&#x80FD;&#x6781;&#x5DEE;: &#x6CA1;&#x6709;&#x5F00;&#x542F;&#x865A;&#x62DF;&#x5316;&#x6280;&#x672F;&#x6216;&#x8005;&#x88AB;Hyper-V&#x72EC;&#x5360;&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;:&#x5728;BIOS&#x91CC;&#x9762;&#x5F00;&#x542F;CPU&#x7684;&#x865A;&#x62DF;&#x5316;&#x6280;&#x672F;&#x652F;&#x6301;&#xFF0C;&#x7136;&#x540E;&#x7981;&#x7528;windows&#x7684;Hyper-V&#x529F;&#x80FD;&#x3002;&#x539F;&#x56E0;&#x548C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x89C1;&#x5982;&#x4E0B;&#x53C2;&#x8003;</p>
+<blockquote>
+<p>&#x53C2;&#x8003;:</p>
+<ul>
+<li><a href="https://forums.virtualbox.org/viewtopic.php?f=3&amp;t=60411" target="_blank">64 bit computer &amp; virtualbox but only gives me 32bit options</a> &#x4E2D;&#x4E8C;&#x697C;Perryg&#x7684;&#x56DE;&#x7B54;</li>
+<li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Virtualization/sect-Virtualization-Troubleshooting-Enabling_Intel_VT_and_AMD_V_virtualization_hardware_extensions_in_BIOS.html" target="_blank">Enabling Intel VT and AMD-V virtualization hardware extensions in BIOS</a></li>
+<li><a href="http://windows.microsoft.com/en-us/windows-8/hyper-v-run-virtual-machines" target="_blank">Run virtual machines on Windows 8.1 with Client Hyper&#x2011;V</a> &#x5173;&#x95ED;Hyper-V&#x529F;&#x80FD;&#x505A;&#x76F8;&#x53CD;&#x7684;&#x64CD;&#x4F5C;</li>
+</ul>
+</blockquote>
+</li>
+</ol>
 <h2 id="%E5%AE%89%E8%A3%85ubuntu-14-04"><a name="%E5%AE%89%E8%A3%85ubuntu-14-04" class="plugin-anchor" href="#%E5%AE%89%E8%A3%85ubuntu-14-04"><span class="fa fa-link"></span></a>&#x5B89;&#x88C5;Ubuntu 14.04</h2>
 <p>14.04&#x7248;&#x672C;&#x5C5E;&#x4E8E;LTS(Long Term Support)&#x7248;&#x672C;&#xFF0C;&#x5177;&#x6709;&#x76F8;&#x5BF9;&#x7A33;&#x5B9A;&#x4E14;&#x7248;&#x672C;&#x8F83;&#x65B0;&#x7684;&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;&#xFF0C;&#x9002;&#x5408;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x4F7F;&#x7528;&#x3002;</p>
 <p>&#x9996;&#x5148;&#xFF0C;<a href="ftp://ftp.sjtu.edu.cn/ubuntu-cd/14.04.3/ubuntu-14.04.3-desktop-amd64.iso" target="_blank">&#x4E0B;&#x8F7D;Ubuntu 14.04&#x5B89;&#x88C5;&#x955C;&#x50CF;</a>&#x3002;</p>
