@@ -12,6 +12,7 @@ share: true
 
 ## 简介
 在几十个小时之前，Google开源了其“深度学习引擎” - [TensorFlow](http://tensorflow.org/)，其网站上对自身的定位是
+
 > TensorFlow is an Open Source Software Library for Machine Intelligence
 
 根据其简介，TensorFlow最初由 Google Brain 部门的专家和工程师开发用来做机器学习和神经网络研究。TensorFlow 采用 **数据流图(data flow graphs)** 进行数值计算。数据流图中的节点表示数学运算，数据流图中的连线表示多维数组(tensors)，用于节点之间的数据通信。其弹性架构允许将计算部署到桌面计算机、服务器甚至是移动设备上的多个CPU或者GPU。
@@ -29,16 +30,17 @@ TensorFlow在Github上的地址是[tensorflow/tensorflow](https://github.com/ten
 
 * **高度灵活(Deep Flexibility)**: 使用起来非常灵活，可自定义数据流图和运算符（没看出来哪里屌）
 * **真·可移植(True Portability)**: 不改变一行代码，在不同运算能力的平台上运行，并且将训练好的分类器部署到移动设备和云端或docker容器中。(这一点听起来真的好屌)
-* **联通研究和生产(Connect Research and Production)**: Google 表示其研究人员在TensorFlow上做实验，然后产品部门的人用TensorFlow来训练并为用户提供服务，采用TensorFlow可以更快地将研究转化为产品，并方便了同行之间的协作和再创新。（这一点也好屌啊）
+* **连通研究和生产(Connect Research and Production)**: Google 表示其研究人员在TensorFlow上做实验，然后产品部门的人用TensorFlow来训练并为用户提供服务，采用TensorFlow可以更快地将研究转化为产品，并方便了同行之间的协作和再创新。（这一点也好屌啊）
 * **自动微分(Auto-Differentiation)**: 因为目前的很多机器学习算法都是基于梯度下降的，TensorFlow 将偏导数的计算简化了(说实话这点没看懂哪里屌)
 * **编程接口(Language Options)**: 目前支持Python和C++接口，提供[IPython notebook](http://ipython.org/notebook.html)用于交互式计算，后期预计会增加Go、Java、Lua、JavaScript、R的接口。
-**性能最大化(Maximize Performance)**: 声称对线程、队列和异步计算提供了"first-class support"，号称可以自由地将计算单元部署到不同的设备。（屌屌屌屌屌）。
+* **性能最大化(Maximize Performance)**: 声称对线程、队列和异步计算提供了"first-class support"，号称可以自由地将计算单元部署到不同的设备。（屌屌屌屌屌）。
 
 ### 开源协议
 采用[Apache 2.0 open source license](http://www.apache.org/licenses/LICENSE-2.0)，懂的人都知道，这个协议相对来说放得很开，参考[五种开源协议的比较(BSD,Apache,GPL,LGPL,MIT) – 整理](http://www.awflasher.com/blog/archives/939)。
 
 ### 为什么Google要开源这么屌的东西？
 Google给的理由简单得难以置信
+
 > If TensorFlow is so great, why open source it rather than keep it proprietary?
 
 Google表示要在机器学习领域搞一套标准化的工具，促进学术研究和产品研发的业内交流，并且希望TensorFlow能造福开发者和用户。最后Google也说了，自家工程师的学术文章今后都打算用TensorFlow来做程序实现和实验研究。
@@ -46,21 +48,23 @@ Google表示要在机器学习领域搞一套标准化的工具，促进学术�
 话说到这里，除了承认自己想立标准外，实在也看不出谷爷寓意何在。等业界评论和分析吧。
 
 ## 安装TensorFlow
-比较讨人喜欢的是，普通的计算机也可以轻松地安装TensorFlow，因为其本身就表示可以运行在不同计算能力的设备上，故对GPU硬件无强制要求。安装TensorFLow是一个非常愉快的过程，因为如果你是一个Python用户，安装TensorFlow和安装其它Python包一样简单无比。
+比较讨人喜欢的是，普通的计算机也可以轻松地安装TensorFlow，因为其本身就表示可以运行在不同计算能力的设备上，故对GPU硬件无强制要求。安装TensorFlow是一个非常愉快的过程，因为如果你是一个Python用户，安装TensorFlow和安装其它Python包一样简单无比。
 
 ### 安装二进制文件
 目前官方文档表示支持Linux和OS X上方便地安装编译好的二进制文件，倒也不是不照顾Windows，而是这个我们要安装的TensorFlow说白了就是一个Python的包，用pip就可以安装。TensorFlow提供了三种安装方式:
+
 1. 直接使用pip安装
 2. 用Python的VirtualEnv安装
 3. 直接下载一个配置好的Docker镜像
 
 **使用pip安装**：有CPU和GPU两个版本
-```bash
+
+{% highlight Bash %}
 # CPU 版本
 $ pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
 # GPU版本(需要CUDA sdk)
 $ pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
-```
+{% endhightlight %}
 
 **使用VirtualEnv安装**: 使用Python的VirtualEnv包安装，更容易维护，感觉不对把文件夹删了再重新安装就行了，下面说说怎么安装:
 * 首先安装依赖的Python包
