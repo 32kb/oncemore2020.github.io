@@ -49,11 +49,11 @@ Docker 容器几乎可以在任意的平台上运行，包括物理机、虚拟�
 
 传统方式是在硬件层面实现虚拟化
 
-![传统虚拟化](/images/head-first-docker/virtualization.png)
+![传统虚拟化](/blog/figures/head-first-docker/virtualization.png)
 
 而Docker容器是在操作系统层面上实现虚拟化，直接复用本地主机的操作系统
 
-![Docker](/images/head-first-docker/docker.png)
+![Docker](/blog/figures/head-first-docker/docker.png)
 
 # 基本概念
 
