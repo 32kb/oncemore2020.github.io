@@ -68,44 +68,44 @@ $ pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.5
 
 **使用VirtualEnv安装**: 使用Python的VirtualEnv包安装，更容易维护，感觉不对把文件夹删了再重新安装就行了，下面说说怎么安装:
 * 首先安装依赖的Python包
-    ```bash
+    {% highlight Bash %}
     $ sudo apt-get install python-pip python-dev python-virtualenv
-    ```
+    {% endhighlight %}
 * 创建一个文件夹作为虚拟环境
-    ```bash
+    {% highlight Bash %}
     $ mkdir tensorflow
-    ```
+    {% endhighlight %}
 * 为创建的文件夹配置VirtualEnv
-    ```bash
+    {% highlight Bash %}
     $ virtualenv --system-site-packages ~/tensorflow
-    ```
+    {% endhighlight %}
 * 激活VirtualEnv(激活完成会看到命令行提示符)
-    ```bash
+    {% highlight Bash %}
     $ cd tensorflow
     $ source /bin/activate
-    ```
+    {% endhighlight %}
 * 安装TensorFlow
-    ```bash
+    {% highlight Bash %}
     (tensorflow)$ pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
-    ```
+    {% endhighlight %}
 
 注意输入`deactivate`可以退出VirtualEnv。
 
 **下载Docker镜像安装**: 首先需要确保系统安装了较新版本的docker(`sudo apt-get install docker`)，然后只需要下载提供的镜像就可以了
-```bash
+{% highlight Bash %}
 $ docker run -it b.gcr.io/tensorflow/tensorflow
-```
+{% endhighlight %}
 或者这个镜像
-```bash
+{% highlight Bash %}
 $ docker run -it b.gcr.io/tensorflow/tensorflow-full
-```
+{% endhighlight %}
 后者提供了一些附加的源代码和tutorial性质的示例程序。
 
 **注意** : 亲测目前需要翻墙才能较顺利地下载TensorFlow的Docker镜像。
 
 ### 测试
 打开终端运行Python，输一下以下代码，没报错基本就对了。注意一定要用Python2.7版本的，对于某些比较激进地已经把Python3作为默认Python的Linux发行版，需要做格外设置。
-```python
+{% highlight Python %}
 $ python
 >>> import tensorflow as tf
 >>> hello = tf.constant('Hello, TensorFlow!')
