@@ -81,10 +81,9 @@ $ pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.5
     $ virtualenv --system-site-packages ~/tensorflow
     {% endhighlight %}
 * 激活VirtualEnv(激活完成会看到命令行提示符)
-{% highlight Bash %}
-$ cd tensorflow
-$ source /bin/activate
-{% endhighlight %}
+    {% highlight Bash %}
+    $ cd tensorflow && source bin/activate
+    {% endhighlight %}
 * 安装TensorFlow
     {% highlight Bash %}
     (tensorflow)$ pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
@@ -145,29 +144,35 @@ matrix1 = tf.constant([[3., 3.]])
 matrix2 = tf.constant([[2.],[2.]])
 product = tf.matmul(matrix1, matrix2)
 {% endhighlight %}
+
 上面的代码首先创建一个 **常量(Constant)** 节点`matrix1`，存储了一个$$1\times2$$矩阵，以及另一个常量节点`matrix2`，存储了一个$$2\times1$$矩阵。注意这里使用“存储”并不恰当，因为我们知道节点只进行数据的I/O，定义的是计算操作而不是变量。所以实际上这两个节点不接收输入数据，输出矩阵数据，这样理解才符合TensorFlow的设计思想。常量节点不接收输入数据。然后`product`节点定义了矩阵乘法运算，接收`matrix1`和`matrix2`的输出数据流。
 
 注意！这里实际上都是构建操作，一丁点计算操作都没有发生，这容易和我们传统的编程思维冲突。要进行实际的计算，我们必须要借助于Session!截至目前，我们不过定一个两种类型(constant()和matmul())的三个节点(ops)而已，它们都在默认的数据流图中(脑中很容易画出这个数据流图吧，哈哈哈)。
 
 ### 部署节点
 构建完成数据流图后，首先需要创建Session对象，Session可接收参数，如果不指定参数，则加载默认数据流图。
+
 {% highlight Python %}
 sess = tf.Session()
 result = sess.run(product)
 print result
 sess.close()
 {% endhighlight %}
+
 上面的代码首先加载默认数据流图，然后使用`.run()`启动节点`product`上的计算操作，会自动调用`matrix1`和`matrix2`的输出并进行矩阵运算(实际上是求内积)。最后使用`.close()`关闭Session。
 
 和Python的文件操作符一样，不想手动关闭的话，就用`with...as...`语法，就是这么方便：
+
 {% highlight Python %}
 with tf.Session() as sess:
     result = sess.run([product])
     print result
 {% endhighlight %}
 
+
 当具有多个处理单元时，可以使用`with...Device`来指定节点部署到哪个单元上，例如
-{% highlight Python %}
+
+{% highlight python %}
 with tf.Session() as sess:
   with tf.device("/gpu:1"):
     matrix1 = tf.constant([[3., 3.]])
@@ -175,10 +180,12 @@ with tf.Session() as sess:
     product = tf.matmul(matrix1, matrix2)
     ...
 {% endhighlight %}
+
 一般`/cpu:0`表示CPU，`/gpu:0`表示第一个GPU，`/gpu:1`表示第二个GPU。
 
 ### 交互运行
 用过IPython的都知道`.eval()`，TensorFlow使用`InteractiveSession`来支持交互式运行，这样可以避免前面那样用一个变量来保持Session。示例
+
 {% highlight Python %}
 # Enter an interactive TensorFlow Session.
 import tensorflow as tf
@@ -198,6 +205,7 @@ print sub.eval()
 
 ### 变量
 Tensors和我们熟悉的变量具有本质上的不同，在TensorFlow的思考领域里，变量用于在数据流图 **执行** 时 **维护状态**，注意是在执行的时候！
+
 {% highlight Python %}
 state = tf.Variable(0, name="counter")
 one = tf.constant(1)
@@ -212,12 +220,14 @@ with tf.Session() as sess:
         sess.run(update)
         print sess.run(state)
 {% endhighlight %}
+
 所谓维护状态，即保存某些节点的运行现场。比如上例，创建的`state`节点的输出即是变量类型，注意变量类型节点使用前需要初始化，通过`init_op`节点来完成。在`for`循环内，首先执行`update`节点：`update`节点会调用`state`节点和`new_value`节点，给`state`节点的变量用`new_value`节点的输出赋值，`new_value`节点又会调用`state`节点和`one`节点，进行加1操作；然后执行`state`节点并打印节点的变量值。
 
 因为变量保存现场的特性，在机器学习里，常用于存储权值，例如神经网络的权值矢量，就可以作为变量存储在一个Tensor中。
 
 ### Fetches(抓取节点输出)
 之前我们用`.run()`时实际上就是一个获取节点输出的过程，TensorFlow还支持一次性对多个节点进行抓取，只需要用方括号括起来就行了，示例
+
 {% highlight Python %}
 input1 = tf.constant(3.0)
 input2 = tf.constant(2.0)
@@ -235,6 +245,7 @@ with tf.Session():
 
 ### Feeds(给节点输入数据)
 之前介绍的操作都没有涉及到给节点输入数据，TensorFlow使用`placeholder`来描述等待输入的节点，只需要指定类型即可，然后在执行节点的时候用一个字典来“喂食”这些节点即可，示例
+
 {% highlight Python %}
 input1 = tf.placeholder(tf.types.float32)
 input2 = tf.placeholder(tf.types.float32)
