@@ -64,7 +64,7 @@ Google表示要在机器学习领域搞一套标准化的工具，促进学术�
 $ pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
 # GPU版本(需要CUDA sdk)
 $ pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
-{% endhightlight %}
+{% endhighlight %}
 
 **使用VirtualEnv安装**: 使用Python的VirtualEnv包安装，更容易维护，感觉不对把文件夹删了再重新安装就行了，下面说说怎么安装:
 * 首先安装依赖的Python包
