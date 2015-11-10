@@ -67,6 +67,7 @@ $ pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.5
 {% endhighlight %}
 
 **使用VirtualEnv安装**: 使用Python的VirtualEnv包安装，更容易维护，感觉不对把文件夹删了再重新安装就行了，下面说说怎么安装:
+
 * 首先安装依赖的Python包
     {% highlight Bash %}
     $ sudo apt-get install python-pip python-dev python-virtualenv
@@ -80,10 +81,10 @@ $ pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.5
     $ virtualenv --system-site-packages ~/tensorflow
     {% endhighlight %}
 * 激活VirtualEnv(激活完成会看到命令行提示符)
-    {% highlight Bash %}
-    $ cd tensorflow
-    $ source /bin/activate
-    {% endhighlight %}
+{% highlight Bash %}
+$ cd tensorflow
+$ source /bin/activate
+{% endhighlight %}
 * 安装TensorFlow
     {% highlight Bash %}
     (tensorflow)$ pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
@@ -123,6 +124,7 @@ Hello, TensorFlow!
 
 ## 基础使用
 使用TensorFlow前首先需要了解TensorFlow是如何完成下面这几件事的：
+
 * 将计算表示成数据流图
 * 在Session中执行数据流图
 * 将数据表示为Tensors
@@ -247,6 +249,7 @@ with tf.Session() as sess:
 
 ## 接下来的学习
 因为TensorFlow这货设计确实还蛮先进的(意思就是好多东西都还需要时间理解)，下面提供相关的资料链接:
+
 1. [Github仓库](https://github.com/tensorflow/tensorflow)
 2. [官方Tutorial](http://tensorflow.org/tutorials)
 3. [TensorFlow机制](http://tensorflow.org/how_tos)
@@ -257,6 +260,7 @@ with tf.Session() as sess:
 
 ## 感受
 接触TensorFlow的第一天，总体感受:
+
 1. 文档健全，除了官方的文档页，到Github仓库的子文件夹下面还有许多README.md页，讲得很详细，对初学者还专门提供了教程，非常友好；
 2. 接口友好，使用很直观;
 3. 工具先进，比如TensorBoard;
