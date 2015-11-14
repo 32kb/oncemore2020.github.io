@@ -52,7 +52,7 @@
     <body class="">
         <!-- body:start -->
         
-    <div class="book" data-level="3.2" data-basepath=".." data-revision="Fri Nov 13 2015 08:39:01 GMT+0000 (UTC)">
+    <div class="book" data-level="3.2" data-basepath=".." data-revision="Sat Nov 14 2015 14:24:05 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -298,7 +298,7 @@
                         
                             <b>3.3.</b>
                         
-                        常用应用
+                        基础应用
                     </a>
                 
             
@@ -507,9 +507,36 @@ guanhao
 $ <span class="hljs-built_in">which</span> python
 </code></pre>
 <p>&#x4F1A;&#x53D1;&#x73B0;&#x8F93;&#x51FA;&#x90FD;&#x8868;&#x660E;<code>zsh</code>&#x548C;<code>python</code>&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x90FD;&#x5728;<code>/usr/bin/</code>&#x4E0B;&#x9762;&#xFF0C;&#x800C;&#x4E0D;&#x662F;<code>/bin</code>&#x6216;<code>/sbin</code>&#x4E0B;&#x9762;&#x3002;</p>
-<h2 id="%E6%80%BB%E7%BB%93"><a name="%E6%80%BB%E7%BB%93" class="plugin-anchor" href="#%E6%80%BB%E7%BB%93"><span class="fa fa-link"></span></a>&#x603B;&#x7ED3;</h2>
-<p>&#x8FD9;&#x4E00;&#x8282;&#x53EA;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x4E86;&#x5E38;&#x7528;&#x7684;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4E8B;&#x5B9E;&#x4E0A;&#x4E86;&#x89E3;&#x8FD9;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x4F5C;&#x7528;&#x6682;&#x65F6;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#xFF0C;&#x5982;&#x9700;&#x8FDB;&#x4E00;&#x6B65;&#x4E86;&#x89E3;Linux&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#xFF0C;&#x5EFA;&#x8BAE;&#x53C2;&#x8003;:
-<a href="http://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/" target="_blank">Linux Directory Structure and Important Files Paths Explained</a>&#x3002;</p>
+<h2 id="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><a name="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" class="plugin-anchor" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="fa fa-link"></span></a>&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<p>&#x6253;&#x5F00;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span>
+/home/guanhao/bin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/<span class="hljs-built_in">local</span>/sbin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="hljs-built_in">local</span>/games
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x4E00;&#x7CFB;&#x5217;<code>bin</code>&#x6216;<code>sbin</code>&#x76EE;&#x5F55;&#x3002;Linux&#x6267;&#x884C;&#x6307;&#x4EE4;&#x65F6;&#x603B;&#x662F;&#x4ECE;<code>$PATH</code>&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x8DEF;&#x5F84;&#x91CC;&#x53BB;&#x641C;&#x7D22;&#x4E8C;&#x8FDB;&#x5236;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x548C;Windows&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x673A;&#x5236;&#x662F;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x7684;&#x3002;</p>
+<p>&#x8981;&#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x6BD4;&#x5982;&#x5C06;&#x67D0;&#x4E2A;&#x76EE;&#x5F55;&#x6DFB;&#x52A0;&#x5230;<code>$PATH</code>&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:/home/guanhao/anaconda/bin
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x4E86;<code>/home/guanhao/anaconda/bin</code>&#x5230;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x6CE8;&#x610F;&#x4E4B;&#x524D;&#x8FD8;&#x6709;<code>$PATH:</code>&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x8868;&#x793A;&#x5C06;&#x76EE;&#x5F55;&#x9644;&#x52A0;&#x5230;&#x539F;&#x6765;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x540E;&#x9762;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x8986;&#x76D6;&#x539F;&#x6709;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F7F;&#x7528;<code>:</code>&#x6765;&#x5206;&#x9694;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5728;<code>$PATH</code>&#x540E;&#x9762;&#x52A0;&#x4E00;&#x4E2A;<code>:</code>&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x4E0A;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x5728;&#x4E0B;&#x6B21;&#x6CE8;&#x9500;&#x540E;&#x5C06;&#x4F1A;&#x5931;&#x6548;&#x3002;&#x8981;&#x6C38;&#x4E45;&#x5730;&#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>.profile</code>&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;&#x8F93;&#x5165;</p>
+<pre><code class="lang-bash">$ cat .profile
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x6700;&#x540E;&#x4E09;&#x884C;&#xFF0C;&#x8868;&#x793A;&#x82E5;&#x7528;&#x6237;&#x7684;&#x76EE;&#x5F55;&#x5B58;&#x5728;<code>bin</code>&#x76EE;&#x5F55;&#xFF0C;&#x5219;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x4FEE;&#x6539;&#x7684;&#x8BED;&#x6CD5;&#x662F;&#x76F4;&#x63A5;&#x5BF9;<code>PATH</code>&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-bash">    PATH=<span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/bin:<span class="hljs-variable">$PATH</span>&quot;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;<code>$HOME</code>&#xFF0C;&#x8868;&#x793A;&#x81EA;&#x5DF1;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x8F93;&#x5165;</p>
+<pre><code>$ cd $HOME
+</code></pre><p>&#x8BD5;&#x8BD5;&#x3002;</p>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6765;&#x8FBE;&#x5230;&#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#x8BBE;&#x7F6E;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5728;&#x91CD;&#x542F;&#x673A;&#x5668;&#x540E;&#x4ECD;&#x7136;&#x751F;&#x6548;&#x3002;</p>
+<p><strong>&#x5EFA;&#x8BAE;</strong>:&#x624B;&#x52A8;&#x4FEE;&#x6539;&#x548C;&#x7EF4;&#x62A4;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x662F;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;<strong>&#x5982;&#x975E;&#x5FC5;&#x8981;&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x624B;&#x52A8;&#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong>&#xFF01;</p>
+<h2 id="problems"><a name="problems" class="plugin-anchor" href="#problems"><span class="fa fa-link"></span></a>Problems</h2>
+<ol>
+<li><p>&#x8FD9;&#x4E00;&#x8282;&#x53EA;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x4E86;&#x5E38;&#x7528;&#x7684;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4E8B;&#x5B9E;&#x4E0A;&#x4E86;&#x89E3;&#x8FD9;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x4F5C;&#x7528;&#x6682;&#x65F6;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#xFF0C;&#x5982;&#x9700;&#x8FDB;&#x4E00;&#x6B65;&#x4E86;&#x89E3;Linux&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#xFF0C;&#x5EFA;&#x8BAE;&#x53C2;&#x8003;: <a href="http://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/" target="_blank">Linux Directory Structure and Important Files Paths Explained</a>&#x3002;</p>
+</li>
+<li><p>&#x9605;&#x8BFB;&#x4E00;&#x4E0B;<code>.profile</code>&#x7684;&#x5176;&#x4F59;&#x5185;&#x5BB9;&#xFF0C;&#x7406;&#x89E3;&#x4E00;&#x4E0B;&#x5176;&#x4F59;&#x7684;&#x4EE3;&#x7801;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#x3002;<strong>&#x9605;&#x8BFB;&#x548C;&#x7406;&#x89E3;&#x4EE3;&#x7801;&#x662F;&#x6700;&#x597D;&#x7684;&#x5B66;&#x4E60;&#x65B9;&#x5F0F;!</strong></p>
+</li>
+<li><p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x91CC;&#x8F93;&#x5165;<code>echo $SHELL</code>&#x67E5;&#x770B;&#x8F93;&#x51FA;&#xFF0C;&#x60F3;&#x4E00;&#x60F3;<code>$SHELL</code>&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF1F;Linux&#x4E4B;&#x4E2D;&#x8FD8;&#x5B58;&#x5728;&#x5176;&#x4ED6;&#x7C7B;&#x4F3C;&#x7684;&#x53D8;&#x91CF;&#x5417;&#xFF0C;&#x627E;&#x627E;&#x770B;&#x3002;</p>
+</li>
+</ol>
 
                     
                     </section>
@@ -523,7 +550,7 @@ $ <span class="hljs-built_in">which</span> python
         <a href="../linux-basic/maintain.html" class="navigation navigation-prev " aria-label="Previous page: 系统维护"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../linux-basic/apps.html" class="navigation navigation-next " aria-label="Next page: 常用应用"><i class="fa fa-angle-right"></i></a>
+        <a href="../linux-basic/apps.html" class="navigation navigation-next " aria-label="Next page: 基础应用"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
