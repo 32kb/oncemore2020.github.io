@@ -36,6 +36,13 @@ script:
   - gitbook install
   - gitbook build
   - cp _book/* ~/oncemore2020.github.io/books/cpp-primer/ -rf
+  # webdoc
+  - cd ~/oncemore2020.github.io/lecturesrc
+  - gitbook-ext -i
+  - gitbook-ext -p
+  - gitbook install
+  - gitbook build
+  - cp _book/* ~/oncemore2020.github.io/webdoc/ -rf
 
 after_success:
   - cd ~/oncemore2020.github.io
