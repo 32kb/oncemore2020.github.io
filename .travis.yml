@@ -1,6 +1,45 @@
 language: ruby
-rvm:
-- 2.1
 
-install: gem install github-pages
-script: jekyll build
+rvm:
+  - stable
+
+before_install:
+  # add id_rsa private key
+  - openssl aes-256-cbc -K $encrypted_e04702d30b3c_key -iv $encrypted_e04702d30b3c_iv
+    -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+  - eval "$(ssh-agent -s)"
+  - ssh-add ~/.ssh/id_rsa
+  - cp ssh_config ~/.ssh/config
+  - git config --global user.name "OnceMore2020"
+  - git config --global user.email guanhwang2011@gmail.com
+  # install gitbook
+  - npm install gitbook-cli -g
+  - npm install gitbook-ext -g
+  - cd ~
+  - git clone git@github.com:OnceMore2020/oncemore2020.github.io.git
+  - gem install github-pages
+  - cd oncemore2020.github.io
+
+script:
+  - jekyll build
+  # a song of ice and fire
+  - cd booksrc/asoiaf
+  - gitbook-ext -i
+  - gitbook-ext -p
+  - gitbook install
+  - gitbook build
+  - cp _book/* ~/oncemore2020.github.io/books/asoiaf/ -rf
+  # cpp primer
+  - cd ~/oncemore2020.github.io/booksrc/cpp-primer
+  - gitbook-ext -i
+  - gitbook-ext -p
+  - gitbook install
+  - gitbook build
+  - cp _book/* ~/oncemore2020.github.io/books/cp-primer/ -rf
+
+after_success:
+  - cd ~/oncemore2020.github.io
+  - git add books
+  - git commit -m":black_nib: Auto built: $(date)"
+  - git push -u origin HEAD:master --force
