@@ -18,6 +18,7 @@ before_install:
   - git clone git@github.com:OnceMore2020/oncemore2020.github.io.git
   - gem install github-pages
   - cd oncemore2020.github.io
+  - git checkout -b deploy
 
 script:
   - jekyll build
@@ -40,4 +41,14 @@ after_success:
   - cd ~/oncemore2020.github.io
   - git add books
   - git commit -m ":black_nib:Updated$(date)"
+  - git checkout master
+  - git merge deploy
   - git push -u origin HEAD:master --force
+
+branches:
+  except:
+    - master
+
+branches:
+  only:
+    - deploy
