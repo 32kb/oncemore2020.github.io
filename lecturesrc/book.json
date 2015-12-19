@@ -1,0 +1,28 @@
+{
+    "variables": {
+        "title": "网页前端技术小组分享计划",
+        "theme": "theme-green"
+    },
+    "collapsible_menu":false,
+    "level_number":false,
+    "links": {
+        "gitbook":false,
+        "sharing": {
+            "all": false,
+            "vk": false,
+            "facebook": false,
+            "google": false,
+            "twitter": false,
+            "weibo": true
+        }
+    },
+    "plugins": ["anchors","ga","disqus","yahei"],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "techsquad"
+        },
+        "ga": {
+            "token": "UA-49487364-1"
+        }
+    }
+}
