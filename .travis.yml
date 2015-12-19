@@ -1,7 +1,6 @@
 language: ruby
 
 before_install:
-  # add id_rsa private key
   - openssl aes-256-cbc -K $encrypted_e04702d30b3c_key -iv $encrypted_e04702d30b3c_iv
     -in id_rsa.enc -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
@@ -10,7 +9,6 @@ before_install:
   - cp ssh_config ~/.ssh/config
   - git config --global user.name "OnceMore2020"
   - git config --global user.email guanhwang2011@gmail.com
-  # install gitbook
   - npm install gitbook-cli -g
   - npm install gitbook-ext -g
   - cd ~
@@ -40,7 +38,3 @@ after_success:
   - git add books
   - git commit -m":black_nib: Auto built: $(date)"
   - git push -u origin HEAD:master --force
-
-branches:
-  only:
-    - master
