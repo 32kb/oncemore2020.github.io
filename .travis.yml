@@ -36,5 +36,5 @@ script:
 after_success:
   - cd ~/oncemore2020.github.io
   - git add books
-  - git commit -m":black_nib: Auto built: $(date)"
+  - git commit -m ":black_nib:Updated$(date)"
   - git push -u origin HEAD:master --force
