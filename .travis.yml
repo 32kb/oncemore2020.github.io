@@ -47,6 +47,7 @@ script:
 after_success:
   - cd ~/oncemore2020.github.io
   - git add books
+  - git add webdoc
   - git commit -m ":black_nib:Updated$(date)"
   - git checkout master
   - git merge deploy
