@@ -1,0 +1,28 @@
+{
+    "variables": {
+        "title": "A Song of Ice and Fire",
+        "theme": "theme-gray"
+    },
+    "collapsible_menu":false,
+    "level_number":false,
+    "links": {
+        "gitbook":false,
+        "sharing": {
+            "all": false,
+            "vk": false,
+            "facebook": false,
+            "google": false,
+            "twitter": false,
+            "weibo": true
+        }
+    },
+    "plugins": ["ga","anchors","disqus","yahei"],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "oncebooks"
+        },
+        "ga": {
+            "token": "UA-49487364-1"
+        }
+    }
+}
