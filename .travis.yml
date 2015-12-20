@@ -15,8 +15,8 @@ before_install:
   - cd ~
   - git clone git@github.com:OnceMore2020/oncemore2020.github.io.git
   - cd oncemore2020.github.io
-  - git branch
-  - git checkout deploy
+  - git branch -a
+  - git checkout -b deploy origin/deploy
   - gem install github-pages
   - npm install gitbook-cli -g
   - npm install gitbook-ext -g
