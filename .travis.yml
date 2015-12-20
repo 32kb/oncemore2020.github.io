@@ -13,8 +13,8 @@ before_install:
   - git config --global user.name "OnceMore2020"
   - git config --global user.email guanhwang2011@gmail.com
   - cd ~
-  - git clone git@github.com:OnceMore2020/oncemore2020.github.io.git build
-  - cd build
+  - git clone git@github.com:OnceMore2020/oncemore2020.github.io.git blogbuild
+  - cd blogbuild
   - git branch -a
   - git checkout -b deploy origin/deploy
   - gem install github-pages
@@ -29,24 +29,24 @@ script:
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/build/books/asoiaf/ -rf
+  - cp _book/* ~/blogbuild/books/asoiaf/ -rf
   # cpp primer
-  - cd ~/build/booksrc/cpp-primer
+  - cd ~/blogbuild/booksrc/cpp-primer
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/build/books/cpp-primer/ -rf
+  - cp _book/* ~/blogbuild/books/cpp-primer/ -rf
   # webdoc
-  - cd ~/build/lecturesrc
+  - cd ~/blogbuild/lecturesrc
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/build/webdoc/ -rf
+  - cp _book/* ~/blogbuild/webdoc/ -rf
 
 after_success:
-  - cd ~/build
+  - cd ~/blogbuild
   - git add assets
   - git add books
   - git add webdoc
