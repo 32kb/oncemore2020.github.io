@@ -29,21 +29,22 @@ script:
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/blogbuild/books/asoiaf/ -rf
+  - mkdir ~/blogbuild/books
+  - cp _book/ ~/blogbuild/books/asoiaf/ -rf
   # cpp primer
   - cd ~/blogbuild/booksrc/cpp-primer
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/blogbuild/books/cpp-primer/ -rf
+  - cp _book/ ~/blogbuild/books/cpp-primer/ -rf
   # webdoc
   - cd ~/blogbuild/lecturesrc
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/blogbuild/webdoc/ -rf
+  - cp _book/ ~/blogbuild/webdoc/ -rf
 
 after_success:
   - cd ~/blogbuild
