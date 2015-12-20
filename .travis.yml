@@ -46,7 +46,7 @@ script:
   - gitbook install
   - gitbook build
   # cp build files
-  - cd ~/buildblog
+  - cd ~/blogbuild
   - git checkout master
   - cp ~/blog ~/blogbuild/blog -rf
   - cp ~/asoiafsrc/_book/* ~/blogbuild/books/asoiaf/ -rf
