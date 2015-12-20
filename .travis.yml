@@ -13,8 +13,8 @@ before_install:
   - git config --global user.name "OnceMore2020"
   - git config --global user.email guanhwang2011@gmail.com
   - cd ~
-  - git clone git@github.com:OnceMore2020/oncemore2020.github.io.git
-  - cd oncemore2020.github.io
+  - git clone git@github.com:OnceMore2020/oncemore2020.github.io.git build
+  - cd build
   - git branch -a
   - git checkout -b deploy origin/deploy
   - gem install github-pages
@@ -29,24 +29,24 @@ script:
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/oncemore2020.github.io/books/asoiaf/ -rf
+  - cp _book/* ~/build/books/asoiaf/ -rf
   # cpp primer
-  - cd ~/oncemore2020.github.io/booksrc/cpp-primer
+  - cd ~/build/booksrc/cpp-primer
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/oncemore2020.github.io/books/cpp-primer/ -rf
+  - cp _book/* ~/build/books/cpp-primer/ -rf
   # webdoc
-  - cd ~/oncemore2020.github.io/lecturesrc
+  - cd ~/build/lecturesrc
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/* ~/oncemore2020.github.io/webdoc/ -rf
+  - cp _book/* ~/build/webdoc/ -rf
 
 after_success:
-  - cd ~/oncemore2020.github.io
+  - cd ~/build
   - git add assets
   - git add books
   - git add webdoc
@@ -56,6 +56,7 @@ after_success:
   - git status
   - git checkout master
   - git merge deploy
+  - git status
   - git push -u origin HEAD:master --force
 
 branches:
