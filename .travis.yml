@@ -46,9 +46,13 @@ script:
 
 after_success:
   - cd ~/oncemore2020.github.io
+  - git add assets
   - git add books
   - git add webdoc
+  - git add blog
+  - git add index.html
   - git commit -m ":black_nib:Updated$(date)"
+  - git status
   - git checkout master
   - git merge deploy
   - git push -u origin HEAD:master --force
