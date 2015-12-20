@@ -18,7 +18,7 @@ before_install:
   - git clone git@github.com:OnceMore2020/oncemore2020.github.io.git
   - gem install github-pages
   - cd oncemore2020.github.io
-  - git checkout -b deploy
+  - git checkout deploy
 
 script:
   - jekyll build
