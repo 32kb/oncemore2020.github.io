@@ -25,21 +25,21 @@ script:
   - jekyll build
   - cp ~/blogbuild/blog ~/blog -rf
   # a song of ice and fire
-  - cp ~/blogbuild/booksrc/asoiaf -r ~/asoiafsrc
+  - cp ~/blogbuild/booksrc/asoiaf ~/asoiafsrc -r
   - cd ~/asoiafsrc
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
   # cpp primer
-  - cp ~/blogbuild/booksrc/cpp-primer ~/cpp-primersrc
+  - cp ~/blogbuild/booksrc/cpp-primer ~/cpp-primersrc -r
   - cd ~/cpp-primersrc
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
   # webdoc
-  - cp ~/blogbuild/lecturesrc ~/lecturesrc
+  - cp ~/blogbuild/lecturesrc ~/lecturesrc -r
   - cd ~/lecturesrc
   - gitbook-ext -i
   - gitbook-ext -p
