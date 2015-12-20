@@ -22,8 +22,10 @@ before_install:
   - npm install gitbook-ext -g
 
 script:
+  - git checkout master
+  # synch source
+  - git merge deploy
   #- jekyll build
-  - cp ~/blogbuild/blog ~/blog -rf
   # a song of ice and fire
   - cp ~/blogbuild/booksrc/asoiaf ~/asoiafsrc -r
   - cd ~/asoiafsrc
@@ -47,8 +49,6 @@ script:
   - gitbook build
   # cp build files
   - cd ~/blogbuild
-  - git checkout master
-  - cp ~/blog ~/blogbuild/ -rf
   - cp ~/asoiafsrc/_book/* ~/blogbuild/books/asoiaf/ -rf
   - cp ~/cpp-primersrc/_book/* ~/blogbuild/books/cpp-primer/ -rf
   - cp ~/lecturesrc/_book/* ~/blogbuild/webdoc/ -rf
