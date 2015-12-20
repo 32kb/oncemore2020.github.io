@@ -23,41 +23,39 @@ before_install:
 
 script:
   - jekyll build
+  - cp ~/blogbuild/blog ~/blog -rf
   # a song of ice and fire
-  - cd booksrc/asoiaf
+  - cp ~/blogbuild/booksrc/asoiaf -r ~/asoiafsrc
+  - cd ~/asoiafsrc
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - mkdir ~/blogbuild/books
-  - cp _book/ ~/blogbuild/books/asoiaf/ -rf
   # cpp primer
-  - cd ~/blogbuild/booksrc/cpp-primer
+  - cp ~/blogbuild/booksrc/cpp-primer ~/cpp-primersrc
+  - cd ~/cpp-primersrc
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/ ~/blogbuild/books/cpp-primer/ -rf
   # webdoc
-  - cd ~/blogbuild/lecturesrc
+  - cp ~/blogbuild/lecturesrc ~/lecturesrc
+  - cd ~/lecturesrc
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook install
   - gitbook build
-  - cp _book/ ~/blogbuild/webdoc/ -rf
+  # cp build files
+  - cd ~/buildblog
+  - git checkout master
+  - cp ~/blog ~/blogbuild/blog -rf
+  - cp ~/asoiafsrc/_book/* ~/blogbuild/books/asoiaf/ -rf
+  - cp ~/cpp-primersrc/_book/* ~/blogbuild/books/cpp-primer/ -rf
+  - cp ~/lecturesrc/_book/* ~/blogbuild/webdoc/ -rf
 
 after_success:
-  - cd ~/blogbuild
-  - git add assets
-  - git add books
-  - git add webdoc
-  - git add blog
-  - git add index.html
+  - git add --all
   - git commit -m ":black_nib:Updated$(date)"
-  - git status
-  - git checkout master
-  - git merge deploy
-  - git commit -m"merge deploy"
   - git status
   - git push -u origin HEAD:master --force
 
