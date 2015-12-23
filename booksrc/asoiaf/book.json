@@ -1,7 +1,7 @@
 {
     "variables": {
         "title": "A Song of Ice and Fire",
-        "theme": "theme-green"
+        "theme": "theme-deepblue"
     },
     "collapsible_menu":true,
     "level_number":false,
