@@ -17,12 +17,12 @@ before_install:
   - cd blogbuild
   - git branch -a
   - git checkout -b master
-  #- gem install github-pages
+  - gem install github-pages
   - npm install gitbook-cli -g
   - npm install gitbook-ext -g
 
 script:
-  #- jekyll build
+  - jekyll build
   # a song of ice and fire
   - cp ~/blogbuild/booksrc/asoiaf ~/asoiafsrc -r
   - cd ~/asoiafsrc
