@@ -1,9 +1,9 @@
 {
     "variables": {
         "title": "代码的未来",
-        "theme": "theme-gray"
+        "theme": "theme-deepblue"
     },
-    "collapsible_menu":true,
+    "collapsible_menu":false,
     "level_number":false,
     "links": {
         "gitbook":false,
