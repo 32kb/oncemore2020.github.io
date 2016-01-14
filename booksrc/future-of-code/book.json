@@ -16,7 +16,7 @@
             "weibo": true
         }
     },
-    "plugins": ["ga","anchors","disqus","yahei"],
+    "plugins": ["ga","disqus"],
     "pluginsConfig": {
         "disqus": {
             "shortName": "oncebooks"
