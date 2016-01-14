@@ -30,6 +30,13 @@ script:
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook build
+  # future of code
+  - cp ~/blogbuild/booksrc/future-of-code ~/future-of-code -r
+  - cd ~/future-of-code
+  - gitbook install
+  - gitbook-ext -i
+  - gitbook-ext -p
+  - gitbook build
   # cpp primer
   - cp ~/blogbuild/booksrc/cpp-primer ~/cpp-primersrc -r
   - cd ~/cpp-primersrc
@@ -47,6 +54,7 @@ script:
   # cp build files
   - cd ~/blogbuild
   - cp ~/asoiafsrc/_book/* ~/blogbuild/books/asoiaf/ -rf
+  - cp ~/future-of-code/_book/* ~/blogbuild/books/future-of-code/ -rf
   - cp ~/cpp-primersrc/_book/* ~/blogbuild/books/cpp-primer/ -rf
   - cp ~/lecturesrc/_book/* ~/blogbuild/webdoc/ -rf
 
