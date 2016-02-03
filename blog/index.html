@@ -1,62 +1,80 @@
 ---
 layout: default
-title: Free the ideas
+title: Featured Posts
 ---
 
-<div class="container">
-    {% for post in paginator.posts %}
-        <header>
-            <div class="entry-meta">
-            <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span>
-            <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
-        </header>
-        <div class="entry-content">
-            {{ post.description }}
+<div class="container" style="margin-top:100px;">
+    <div class="row">
+        <div class="col-md-9">
+        <div class="mainpanel jumbotron">
+            {% for post in paginator.posts %}
+                <header>
+                    <div class="entry-meta">
+                    <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span>
+                    <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+                </header>
+                <div class="entry-content">
+                    {{ post.description }}
+                </div>
+            {% endfor %}
+            <nav style="text-align:center;margin-left:auto; margin-right:auto;"><ul class="pagination pagination-lg">
+                <li>
+                    {% if paginator.previous_page %}
+                        {% if paginator.previous_page == 1 %}
+                            <a href="{{ site.url }}/blog/" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        {% else %}
+                            <a href="{{ site.url }}/blog/page{{ paginator.previous_page }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        {% endif %}
+                    {% else %}
+                        <span aria-hidden="true">&laquo;</span>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if paginator.page == 1 %}
+                        <span class="current-page">1</span>
+                    {% else %}
+                        <a href="{{ site.url }}/blog">1</a>
+                    {% endif %}
+                </li>
+                {% for count in (2..paginator.total_pages) %}
+                <li>
+                    {% if count == paginator.page %}
+                        <span class="current-page">{{ count }}</span>
+                    {% else %}
+                        <a href="{{ site.url }}/blog/page{{ count }}">{{ count }}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+                <li>
+                    {% if paginator.next_page %}
+                    <a href="{{ site.url }}/blog/page{{ paginator.next_page }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    {% else %}
+                        <span aria-hidden="true">&raquo;</span>
+                    {% endif %}
+                </li>
+            </ul></nav>
         </div>
-    {% endfor %}
+        </div>
+
+        <div class="col-md-3">
+            <div class="sidenav jumbotron">
+                {% for post in site.posts %}
+                    {% if forloop.first %}
+                        <ul>
+                    {% endif %}
+                        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                    {% if forloop.last %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
 
-<nav style="text-align:center;margin-left:auto; margin-right:auto;"><ul class="pagination pagination-lg">
-    <li>
-    {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-            <a href="{{ site.url }}/blog/" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-            </a>
-        {% else %}
-            <a href="{{ site.url }}/blog/page{{ paginator.previous_page }}" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-            </a>
-        {% endif %}
-        {% else %}
-            <span aria-hidden="true">&laquo;</span>
-    {% endif %}
-    </li>
-
-    <li>
-        {% if paginator.page == 1 %}
-            <span class="current-page">1</span>
-        {% else %}
-            <a href="{{ site.url }}/blog">1</a>
-        {% endif %}
-    </li>
-    {% for count in (2..paginator.total_pages) %}
-        <li>
-            {% if count == paginator.page %}
-                <span class="current-page">{{ count }}</span>
-            {% else %}
-                <a href="{{ site.url }}/blog/page{{ count }}">{{ count }}</a>
-            {% endif %}
-        </li>
-    {% endfor %}
-
-    <li>
-    {% if paginator.next_page %}
-        <a href="{{ site.url }}/blog/page{{ paginator.next_page }}" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-        </a>
-    {% else %}
-        <span aria-hidden="true">&raquo;</span>
-    {% endif %}
-    </li>
-</ul></nav>

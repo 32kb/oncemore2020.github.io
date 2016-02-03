@@ -1,22 +1,35 @@
 ---
 layout: default
 permalink: /blog/about/
-title: "关于博客站"
-modified: 2014-11-5 22:00
-tags: [about]
-image:
-  feature:
-share:
+title: "About"
 ---
-<div id="content">
-<div class="entry">
-<p>个人博客，用于记录一些技术笔记和个人心得。</p>
-
-<h1 align="center">特别致谢</h1>
-<div align="center">
-<a href="http://www.vim.org/" class="btn btn-material-grey-900">Vim</a>
-<a href="http://jekyllrb.com/" class="btn btn-material-grey-900">Jekyll</a>
-<a href="https://pages.github.com/" class="btn btn-material-grey-900">Github Pages</a>
-<a href="http://www.google.com/chrome/" class="btn btn-material-grey-900">Chrome</a>
-<a href="http://nodejs.org/" class="btn btn-material-grey-900">node.js</a>
-</div></div></div>
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="jumbotron mainpanel">
+                <p>个人博客，用于记录一些技术笔记和个人心得。</p>
+                <h1 align="center">特别致谢</h1>
+                <div align="center">
+                    <a href="http://www.vim.org/" class="btn btn-material-grey-900">Vim</a>
+                    <a href="http://jekyllrb.com/" class="btn btn-material-grey-900">Jekyll</a>
+                    <a href="https://pages.github.com/" class="btn btn-material-grey-900">Github Pages</a>
+                    <a href="http://www.google.com/chrome/" class="btn btn-material-grey-900">Chrome</a>
+                    <a href="http://nodejs.org/" class="btn btn-material-grey-900">node.js</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="sidenav jumbotron">
+                {% for post in site.posts %}
+                    {% if forloop.first %}
+                        <ul>
+                    {% endif %}
+                        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                    {% if forloop.last %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

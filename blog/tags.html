@@ -1,29 +1,41 @@
 ---
 layout: default
 permalink: /blog/tags/
-title: 标签归档
-description: "An archive of posts sorted by tag."
+title: Tags
 ---
-<div id="content">
-<div class="entry" >
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tags_list = site_tags | split:',' | sort %}
-<ul class="nav nav-pills" >
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-    <li class="active" style="margin-left:10px;"><a href="#{{ this_word }}">{{ this_word }} <span class="badge">{{ site.tags[this_word].size }}</span></a></li>
-  {% endunless %}{% endfor %}
-</ul>
-
-{% for item in (0..site.tags.size) %}{% unless forloop.last %}
-  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-	<article>
-	<h2 id="{{ this_word }}">{{ this_word }}</h2>
-		<ul>
-    {% for post in site.tags[this_word] %}{% if post.title != null %}
-      <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endif %}{% endfor %}
-		</ul>
-	</article><!-- /.hentry -->
-{% endunless %}{% endfor %}
-</div></div>
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="mainpanel jumbotron">
+                {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+                {% assign tags_list = site_tags | split:',' | sort %}
+                {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+                    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+                    <a href="#{{ this_word }}"><span class="label label-info">{{ this_word }}</span></a>
+                {% endunless %}{% endfor %}
+                {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+                {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+                <h2 id="{{ this_word }}">{{ this_word }}</h2>
+                <ul>
+                {% for post in site.tags[this_word] %}{% if post.title != null %}
+                    <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                {% endif %}{% endfor %}
+                </ul>
+                {% endunless %}{% endfor %}
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="sidenav jumbotron">
+                {% for post in site.posts %}
+                    {% if forloop.first %}
+                        <ul>
+                    {% endif %}
+                        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                    {% if forloop.last %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
