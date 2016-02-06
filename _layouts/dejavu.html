@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
+    {% include dejavu_head.html %}
     {% include header.html %}
     <body>
         {{ content }}
         {% include js.html %}
+        <script src="//cdn.bootcss.com/nanogallery/5.9.1/jquery.nanogallery.min.js"></script>
         <script>
-            $.material.init()
+            jQuery(document).ready(function () {
+                jQuery("#nanoGallery").nanoGallery({
+                    thumbnailWidth: 'auto',
+                    thumbnailHeight: 400,
+                    locationHash: false,
+                    thumbnailHoverEffect:'borderLighter,imageScaleIn80'
+                });
+            });
         </script>
     </body>
 </html>
