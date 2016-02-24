@@ -3,7 +3,7 @@
     {% include head.html %}
     {% include header.html %}
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid" style="margin-top:50px;">
             <div class="row-fluid">
                 <div class="col-md-3">
                     <div id="toc"></div>
@@ -24,7 +24,9 @@
         </div>
         {% include js.html %}
         <script>
-            $("#toc").tocify();
+            $(document).ready(function() {
+                $("#toc").tocify();
+            });
         </script>
     </body>
 </html>

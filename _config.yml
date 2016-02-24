@@ -1,8 +1,5 @@
 title: OnceMore2020
-reading_time:     true
-words_per_minute: 60
-#url:              http://oncemore2020.github.io
-url:              localhost:4000
+url:              http://oncemore2020.github.io
 
 # Owner/author information
 owner:
@@ -16,7 +13,6 @@ gems:
 
 timezone:    Asia/Shanghai
 future:      true
-highlighter: pygments
 markdown:    kramdown
 
 permalink:   /:categories/:title/

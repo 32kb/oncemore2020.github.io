@@ -2,12 +2,7 @@
 layout: post
 title: "初探TensorFlow"
 modified: 2015-11-10 22:00:00 +0800
-categories:
 tags: [Machine Learning]
-image:
-  feature:
-comments: true
-share: true
 ---
 
 ## 简介
