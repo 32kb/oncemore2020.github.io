@@ -1,15 +1,9 @@
 ---
 layout: post
-title: "head first docker"
+title: "Docker上手"
 modified: 2015-05-05 10:29:23 +0800
-categories:
-tags: [docker]
-image:
-  feature:
-comments: true
-share: true
+tags: [Coding]
 ---
-
 本文摘抄自[Docker-从入门到实践](https://www.gitbook.com/book/yeasy/docker_practice/details)，作为Docker学习笔记整理概要。
 
 # 什么是Docker

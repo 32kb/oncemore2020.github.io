@@ -1,14 +1,9 @@
 ---
 layout: post
-title: "关于齐次坐标系的入门级思考"
+title: "齐次坐标系入门级思考"
 modified: 2015-03-18 16:46:30 +0800
-tags: [Computer Visions]
-image:
-  feature: abstract-3.jpg
-comments: true
-share: true
+tags: [CV]
 ---
-
 **齐次坐标系(Homogeneous Coordinates)**是计算机视觉和图形学中的一个重要的数学工具。本文对其进行简要介绍。
 
 # 1.初步了解

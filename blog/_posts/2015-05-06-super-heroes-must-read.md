@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "超级英雄崛起-Reading List #1: Must Read List"
+title: "超级英雄必读清单"
 modified: 2015-05-06 09:29:00 +0800
-tags: [SuperHeroes]
+tags: [Hobby]
 ---
 
 [edX](https://edx.org)上的[SmithsonianX -  POPX1.1x](https://courses.edx.org/courses/course-v1:SmithsonianX+POPX1.1x+2015_T2/info)开课啦！

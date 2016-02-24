@@ -1,13 +1,8 @@
 ---
 layout: post
-title: "Haar/AdaBoost级联器:OpenCV实现"
+title: "Haar/AdaBoost级联器"
 modified: 2014-04-14 13:08:38 +0800
-tags: [OpenCV,Computer Visions,TechNotes]
-image:
-  feature: feature-cv2.jpg
-  background: bg-4.jpg
-comments: ture
-share: ture
+tags: [CV]
 ---
 基于Haar小波的AdaBoost级联器在低分辨率条件和(接近于)实时处理应用下具有优势，
 笔记记录采用OpenCV提供的运算库进行实现的细节，包括：

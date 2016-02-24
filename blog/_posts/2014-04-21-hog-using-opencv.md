@@ -1,13 +1,8 @@
 ---
 layout: post
-title: "HOG/linSVM行人检测器：OpenCV实现"
+title: "HOG/linSVM检测器"
 modified: 2014-04-21 11:05:22 +0800
-tags: [OpenCV,Computer Visions,TechNotes]
-image:
-  feature: feature-cv2.jpg
-  background: bg-4.jpg
-comments: true
-share: true
+tags: [CV]
 ---
 采用HOG特征进行训练的SVM分类器在中等分辨率和低处理时间限制要求下具有明显优势，笔记记录HOG特征
 的理论基础，以及采用OpenCV的_HOGDescriptor_配合SVMLight实现分类器。包括：

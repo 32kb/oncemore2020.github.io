@@ -3,10 +3,6 @@ layout: post
 title: "How To Read A Paper"
 modified: 2014-06-24 14:47:04 +0800
 tags: [Tao]
-image:
-  feature: paper.png
-comments: true
-share: true
 ---
 
 积累足够的外文文献的阅读量对于研究生来说是必须的，但是阅读外文文献会遇到许多新问题，除却英文能力缺乏造成的阻碍外，

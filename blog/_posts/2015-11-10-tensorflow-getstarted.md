@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "初探TensorFlow"
+title: "TensorFlow上手"
 modified: 2015-11-10 22:00:00 +0800
 tags: [Machine Learning]
 ---
 
-## 简介
+# 简介
 在几十个小时之前，Google开源了其“深度学习引擎” - [TensorFlow](http://tensorflow.org/)，其网站上对自身的定位是
 
 > TensorFlow is an Open Source Software Library for Machine Intelligence
@@ -14,13 +14,13 @@ tags: [Machine Learning]
 
 TensorFlow在Github上的地址是[tensorflow/tensorflow](https://github.com/tensorflow/tensorflow)。
 
-### 何谓数据流图？
+## 何谓数据流图？
 
 ![tf00](/blog/figures/tf-gs/tf00.gif)
 
 数据流图用 **有向图(directed graph)** 中的 **节点(nodes)** 和 **连线(edges)** 来描述数学运算，节点表示数学运算，或是输入数据和运算结果的I/O；连线描述节点之间的I/O，承载 **动态多维数据阵列(dynamically-sized multidimensional data arrays)**, 开发人员称为 **Tensors**。TensorFlow的起名也来源于此。节点可以分配或部署给承载了计算资源的设备，进行异步并行计算。
 
-### 主要特性
+## 主要特性
 说实话下面几个特性看起来很屌，但是并不能具体把握到底是什么概念，这大概是一个需要开脑洞的过程(RTFM)。
 
 * **高度灵活(Deep Flexibility)**: 使用起来非常灵活，可自定义数据流图和运算符（没看出来哪里屌）
@@ -30,10 +30,10 @@ TensorFlow在Github上的地址是[tensorflow/tensorflow](https://github.com/ten
 * **编程接口(Language Options)**: 目前支持Python和C++接口，提供[IPython notebook](http://ipython.org/notebook.html)用于交互式计算，后期预计会增加Go、Java、Lua、JavaScript、R的接口。
 * **性能最大化(Maximize Performance)**: 声称对线程、队列和异步计算提供了"first-class support"，号称可以自由地将计算单元部署到不同的设备。（屌屌屌屌屌）。
 
-### 开源协议
+## 开源协议
 采用[Apache 2.0 open source license](http://www.apache.org/licenses/LICENSE-2.0)，懂的人都知道，这个协议相对来说放得很开，参考[五种开源协议的比较(BSD,Apache,GPL,LGPL,MIT) – 整理](http://www.awflasher.com/blog/archives/939)。
 
-### 为什么Google要开源这么屌的东西？
+## 为什么Google要开源这么屌的东西？
 Google给的理由简单得难以置信
 
 > If TensorFlow is so great, why open source it rather than keep it proprietary?
@@ -42,10 +42,10 @@ Google表示要在机器学习领域搞一套标准化的工具，促进学术�
 
 话说到这里，除了承认自己想立标准外，实在也看不出谷爷寓意何在。等业界评论和分析吧。
 
-## 安装TensorFlow
+# 安装TensorFlow
 比较讨人喜欢的是，普通的计算机也可以轻松地安装TensorFlow，因为其本身就表示可以运行在不同计算能力的设备上，故对GPU硬件无强制要求。安装TensorFlow是一个非常愉快的过程，因为如果你是一个Python用户，安装TensorFlow和安装其它Python包一样简单无比。
 
-### 安装二进制文件
+## 安装二进制文件
 目前官方文档表示支持Linux和OS X上方便地安装编译好的二进制文件，倒也不是不照顾Windows，而是这个我们要安装的TensorFlow说白了就是一个Python的包，用pip就可以安装。TensorFlow提供了三种安装方式:
 
 1. 直接使用pip安装
@@ -98,7 +98,7 @@ $ docker run -it b.gcr.io/tensorflow/tensorflow-full
 
 **注意** : 亲测目前需要翻墙才能较顺利地下载TensorFlow的Docker镜像。
 
-### 测试
+## 测试
 打开终端运行Python，输一下以下代码，没报错基本就对了。注意一定要用Python2.7版本的，对于某些比较激进地已经把Python3作为默认Python的Linux发行版，需要做格外设置。
 
 {% highlight Python %}
@@ -116,7 +116,7 @@ Hello, TensorFlow!
 
 注意上面的代码已经体现出TensorFlow的一些思想了，比如注意那个`.Session()`，正好体现了之前所说的真·可移植性。事实上TensorFlow正是使用Session来将数据流图部署到不同的设备上(CPU、GPU)，和前序步骤的数据流图定义可以相互独立，这一点显得非常炫酷。
 
-## 基础使用
+# 基础使用
 使用TensorFlow前首先需要了解TensorFlow是如何完成下面这几件事的：
 
 * 将计算表示成数据流图
@@ -129,7 +129,7 @@ Hello, TensorFlow!
 
 可以看出，TensorFlow主要包括两个步骤:数据流图的构建、Session部署。官方文档建议用Python来进行数据流图的构建，因为Python接口提供了很多C++接口没有的helper function。
 
-### 构建数据流图示例
+## 构建数据流图示例
 TensorFlow默认提供了单一的数据流图容器来容纳数据流图的节点，当然也支持使用多个数据流图容器。我们从单容器开始了解，不需要手动地进行数据流图层面的操作。
 
 {% highlight Python %}
@@ -144,7 +144,7 @@ product = tf.matmul(matrix1, matrix2)
 
 注意！这里实际上都是构建操作，一丁点计算操作都没有发生，这容易和我们传统的编程思维冲突。要进行实际的计算，我们必须要借助于Session!截至目前，我们不过定一个两种类型(constant()和matmul())的三个节点(ops)而已，它们都在默认的数据流图中(脑中很容易画出这个数据流图吧，哈哈哈)。
 
-### 部署节点
+## 部署节点
 构建完成数据流图后，首先需要创建Session对象，Session可接收参数，如果不指定参数，则加载默认数据流图。
 
 {% highlight Python %}
@@ -178,7 +178,7 @@ with tf.Session() as sess:
 
 一般`/cpu:0`表示CPU，`/gpu:0`表示第一个GPU，`/gpu:1`表示第二个GPU。
 
-### 交互运行
+## 交互运行
 用过IPython的都知道`.eval()`，TensorFlow使用`InteractiveSession`来支持交互式运行，这样可以避免前面那样用一个变量来保持Session。示例
 
 {% highlight Python %}
@@ -198,7 +198,7 @@ print sub.eval()
 # ==> [-2. -1.]
 {% endhighlight %}
 
-### 变量
+## 变量
 Tensors和我们熟悉的变量具有本质上的不同，在TensorFlow的思考领域里，变量用于在数据流图 **执行** 时 **维护状态**，注意是在执行的时候！
 
 {% highlight Python %}
@@ -220,7 +220,7 @@ with tf.Session() as sess:
 
 因为变量保存现场的特性，在机器学习里，常用于存储权值，例如神经网络的权值矢量，就可以作为变量存储在一个Tensor中。
 
-### Fetches(抓取节点输出)
+## Fetches(抓取节点输出)
 之前我们用`.run()`时实际上就是一个获取节点输出的过程，TensorFlow还支持一次性对多个节点进行抓取，只需要用方括号括起来就行了，示例
 
 {% highlight Python %}
@@ -238,7 +238,7 @@ with tf.Session():
 # [array([ 21.], dtype=float32), array([ 7.], dtype=float32)]
 {% endhighlight %}
 
-### Feeds(给节点输入数据)
+## Feeds(给节点输入数据)
 之前介绍的操作都没有涉及到给节点输入数据，TensorFlow使用`placeholder`来描述等待输入的节点，只需要指定类型即可，然后在执行节点的时候用一个字典来“喂食”这些节点即可，示例
 
 {% highlight Python %}
@@ -253,7 +253,7 @@ with tf.Session() as sess:
 # [array([ 14.], dtype=float32)]
 {% endhighlight %}
 
-## 接下来的学习
+# 然后呢？
 因为TensorFlow这货设计确实还蛮先进的(意思就是好多东西都还需要时间理解)，下面提供相关的资料链接:
 
 1. [Github仓库](https://github.com/tensorflow/tensorflow)
@@ -264,7 +264,7 @@ with tf.Session() as sess:
 
 其中\[2\]中从Softmax讲到CNN，RNN，word2vec，是最佳的实战教程。\[3\]对理解TensorFlow的思想有帮助，在下认为[TensorBoard: Visualizing Learning](http://tensorflow.org/how_tos/summaries_and_tensorboard/index.md)非常有趣！
 
-## 感受
+# 手感
 接触TensorFlow的第一天，总体感受:
 
 1. 文档健全，除了官方的文档页，到Github仓库的子文件夹下面还有许多README.md页，讲得很详细，对初学者还专门提供了教程，非常友好；

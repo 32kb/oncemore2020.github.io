@@ -2,13 +2,8 @@
 layout: post
 title: "OpenCV2 基础操作"
 modified: 2014-09-19 09:42:33 +0800
-tags: [OpenCV,Computer Visions]
-image:
-  feature: homefeature.jpg
-comments: true
-share: true
+tags: [CV]
 ---
-
 快速了解OpenCV2基础操作，对于系统地开始阅读和学习文档有很大帮助。
 
 # Mat数据结构

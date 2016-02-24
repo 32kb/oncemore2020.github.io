@@ -1,5 +1,7 @@
 title: OnceMore2020
-url:              http://oncemore2020.github.io
+#url:              http://oncemore2020.github.io
+url:              http://192.168.1.153:4000
+
 
 # Owner/author information
 owner:

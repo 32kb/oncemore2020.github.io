@@ -1,15 +1,9 @@
 ---
 layout: post
-title: "在Ubuntu中安装OpenCV2"
+title: "Ubuntu编译安装OpenCV2"
 modified: 2014-07-29 23:24:19 +0800
-tags: [OpenCV,Computer Visions,handbook]
-image:
-  feature: homefeature.jpg
-comments:  true
-share: true
-
+tags: [CV]
 ---
-
 在Ubuntu 12.04 LTS 版本下安装成功且正常使用了很长时间，在Ubuntu 14.04 LTS 版本下安装成功但是没有长期使用，不过应该没有问题。
 
 # 安装开发构建工具

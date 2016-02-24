@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Markdown学习笔记"
+title: "Markdown快速上手"
 modified: 2014-03-31 20:42:37 +0800
-tags: [markdown,handbook]
+tags: [Valyria Steel]
 ---
 Markdown是一种[**轻量级标记语言**](http://zh.wikipedia.org/wiki/%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80)，由[**John Gruber**](http://en.wikipedia.org/wiki/John_Gruber)和
 [**Aaron Swartz**](http://en.wikipedia.org/wiki/Aaron_Swartz)创始。我之前使用过MS Office类文本处理器和TeX排版系统(算是两个派系)，

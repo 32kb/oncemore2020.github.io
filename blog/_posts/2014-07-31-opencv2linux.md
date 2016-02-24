@@ -1,12 +1,8 @@
 ---
 layout: post
-title: "快速开始学习OpenCV"
+title: "OpenCV上手"
 modified: 2014-07-31 12:12:24 +0800
-tags: [OpenCV,Computer Visions,handbook]
-image:
-  feature: homefeature.jpg
-comments: true
-share: true
+tags: [CV]
 ---
 
 在Linux下安装好OpenCV2后，如何快速开始使用或学习OpenCV是首要问题。如何编译一个采用了OpenCV运算库的程序呢(C/C++)？有下面几种不同的思路：

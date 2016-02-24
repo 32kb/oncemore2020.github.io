@@ -1,14 +1,9 @@
 ---
 layout: post
-title: "OpenCV2访问像素值的几种方法"
+title: "OpenCV2访问像素值"
 modified: 2014-11-05 21:26:26 +0800
-tags: [OpenCV,Computer Visions]
-image:
-  feature: homefeature.jpg
-comments: true
-share: ture
+tags: [CV]
 ---
-
 进行空域处理的第一步就是要访问图像某个位置的像素值，OpenCV2提供了几种访问图像像素的方法，
 主要包括**随机访问稀疏位置集合**和**遍历图像大面积连续区域**(甚至整幅图像)像素两类模式，
 本文对几种常用的方法进行总结。
