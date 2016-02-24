@@ -5,12 +5,12 @@ title: Featured Posts
 <div class="container" style="margin-top:50px;">
     <div class="row">
         <div class="col-md-9">
-        <div class="mainpanel jumbotron">
+        <div class="jumbotron mainpanel">
             {% for post in paginator.posts %}
                 <header>
                     <div class="entry-meta">
-                    <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}/blog/{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span>
-                    <h1 class="entry-title"><a href="{{ site.url }}/blog/{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+                    <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span>
+                    <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
                 </header>
                 <div class="entry-content">
                     {{ post.description }}
@@ -62,7 +62,7 @@ title: Featured Posts
         </div>
 
         <div class="col-md-3">
-            <div class="sidenav jumbotron">
+            <div class="jumbotron sidenav">
                 {% for post in site.posts %}
                     {% if forloop.first %}
                         <ul>
