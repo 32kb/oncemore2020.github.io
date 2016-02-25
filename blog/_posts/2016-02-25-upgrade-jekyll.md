@@ -12,7 +12,7 @@ tags: [Valyria Steel]
 * 大幅提升构建速度
 * 不再支持相对 Permalinks 以及 Textile
 
-这可能会导致之前使用 Pygments 进行代码高亮的托管在 Github Pages 上的网页的代码高亮出现问题。这里主要记录一下升级到 Jekyll 3.0+ (目前的最新版本为 3.1.2) 后做的一些调整。
+这可能会导致之前使用 Pygments 进行代码高亮的托管在 Github Pages 上的网页的代码高亮出现问题，以及一些其他的问题。这次升级调整，是上游的 Jekyll 演进的自然结果。这里主要记录一下升级到 Jekyll 3.0+ (目前的最新版本为 3.1.2) 后做的一些调整。
 
 ## 配置文件
 首先是 Jekyll 的配置文件 `_config.yml`，`markdown` 选项强制使用 `kramdown`，另外，之前的 `highlighter` 和 `syntax_highlighter` 都必须修改为 `rouge`。
@@ -157,4 +157,3 @@ if __name__ == '__main__':
 * 能够心态平和地 RTFM 以及 RTFS
 
 倘若觉得功能升级不能理解了，大概需要先思考一下，自己是不是疏忽了更先进的思维方式。
-
