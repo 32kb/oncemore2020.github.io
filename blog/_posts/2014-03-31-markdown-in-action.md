@@ -9,78 +9,73 @@ Markdown是一种[**轻量级标记语言**](http://zh.wikipedia.org/wiki/%E8%BD
 了解过Markdown后我认为他在前两者之间取了一个折中，即同时保留了**易读性**和**易写性**,所以有必要进行系统地学习。本文特色是和LaTeX
 进行了对比分析。
 
-# 文章目录
-{:.no_toc}
-
-* 这段文字会被替换为文章目录，但目录内不包括 "文章目录" 自身
-{:toc}
-
-#编辑器
+## 编辑器
 推荐使用在线Markdown编辑器[**StackEdit**](https://stackedit.io/)，能够实现实时的预览，首先这是基于Web的，不依赖操作
 系统，这足以使许多人不必为如何使用Markdown而望而生畏，对于学习和验证语法是很好的。写博客时还是
 推荐采用自己熟悉的文本编辑器提高效率，许多静态博客工具(比如此博客采用的[**Jekyll**](http://jekyllrb.com/))会自动地生成相应的html网页。
 
-#入门-基本语法 {#start}
+## 入门-基本语法 {#start}
 
-##段落
+### 段落
 一个段落是不包含空行的文本片段，当出现一个空行时，表示空行下面的是新段落。在区块对象之间使用空行一般是比较好的习惯。
 在LaTeX下面，使用`\\`和`\newline`或是一个空行进行换行，使用两个空行进行段落区分。
 
-##转义字符
+### 转义字符
 接下来会介绍一些Markdown语法中的关键字(标号)，如何在文章中显示这些标号，而不是让Markdown处理
-对应的关键字呢？方法和C的转义字符类似。使用反斜杠`\`后面加标号来实现，主要包括下面这些标号。
+对应的关键字呢？方法和其它编程语言的转义字符类似。使用反斜杠 `\ ` 后面加标号来实现，主要包括下面这些标号。
 
-```Vim
-\   反斜线
-`   反引号
-*   星号
-_   底线
-{}  花括号
-[]  方括号
-()  括弧
-#   井字号
-+   加号
--   减号
-.   英文句点
-!   惊叹号
-```
-而在LaTeX中，基本上所有的关键字都会以`\`号开始，这和转义字符思想是一样的。
+|标号|含义|
+|:---|---:|
+|\   |反斜线|
+|\`   |反引号|
+|*   |星号|
+|_   |底线|
+|{}  |花括号|
+|[]  |方括号|
+|()  |括弧|
+|#   |井字号|
+|+   |加号|
+|-   |减号|
+|.   |英文句点|
+|!   |惊叹号|
 
-##标题
+而在LaTeX中，基本上所有的关键字都会以 `\ ` 号开始，这和转义字符思想是一样的。
+
+## 标题
 Markdown采用`#`符号进行标题分级(类Atx形式)，最高可分级到六级标题。
 
-```Vim
-#一级标题
+```
+# 一级标题
 
-##二级标题
+## 二级标题
 
-###三级标题
+### 三级标题
 
-####四级标题
+#### 四级标题
 
-#####五级标题
+##### 五级标题
 
-######六级标题
+###### 六级标题
 ```
 
 ---
 
-#一级标题
+# 一级标题
 {:.no_toc}
 
-##二级标题
+## 二级标题
 {:.no_toc}
 
-###三级标题
+### 三级标题
 {:.no_toc}
 
-####四级标题
+#### 四级标题
 {:.no_toc}
 
-#####五级标题
+##### 五级标题
 {:.no_toc}
 
-######六级标题
+###### 六级标题
 {:.no_toc}
 
 ---
@@ -89,7 +84,7 @@ Markdown采用`#`符号进行标题分级(类Atx形式)，最高可分级到六�
 
 另外一种方法是类Setext形式，用`=`表示一级标题，`-`表示二级标题。
 
-```Vim
+```
 一级标题
 ========
 
@@ -112,7 +107,7 @@ Markdown采用`#`符号进行标题分级(类Atx形式)，最高可分级到六�
 注意`=`和`-`的数量是任意的，一般的习惯是写到与标题长度对齐。
 如果采用LaTeX呢，能想到的是用`\section{}`来实现对文章分节从而实现类似的效果。
 
-```TeX
+```
 \section{一级标题}
 \subsection{二级标题}
 \subsubsection{三级标题}
@@ -126,7 +121,7 @@ Markdown采用`#`符号进行标题分级(类Atx形式)，最高可分级到六�
 Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，这时只需要采用`>>`即可，`>`的数量表示
 嵌套的层次。同时，引用内允许采用其他markdown语法。
 
-```Vim
+```
 > 张三丰道
 >
 >> 用意不用力，太极圆转，无使断绝。
@@ -150,7 +145,7 @@ Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，
 
 在LaTeX中，需要使用摘录环境：`quote`,`quotation`或是`verse`。
 
-```TeX
+```
 \begin{quote}
 引文两端都缩进。
 \end{quote}
@@ -170,7 +165,7 @@ Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，
 ##列表
 支持无序列表和有序列表。无序列表使用`*`,`+`,`-`号进行标记,他们的作用是等效的。
 
-```Vim
+```
 * 苹果
 + 番茄
 - 板蓝根
@@ -186,7 +181,7 @@ Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，
 
 有序列表需要使用数字标号。
 
-```Vim
+```
 1. 草莓
 2. 黄瓜
 3. 金银花
@@ -203,7 +198,7 @@ Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，
 需要注意的是，在列表标号(`*`,`+`,`-`,`1.`)后面，需要有一个空格。另外，有序列表前面的数字标号实际上并不需要是正确的(也就是
 想看起来的样子)，这完全是给懒人设计的，比如采用：
 
-```Vim
+```
 9. 鬼
 5. 舞
 2. 日
@@ -224,7 +219,7 @@ Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，
 后的行缩进与否并不重要，但是保持整齐的缩进是比较好的风格。
 
 
-```Vim
+```
 * 张无忌道：“人家高兴，你也高兴，那才是真高兴啊。”那少女
   冷笑道：“哼！我跟你说在前头，这时候我心里高兴，就不来害
   你。哪一天心中不高兴了，说不定会整治得你死不了，活不成，
@@ -247,7 +242,7 @@ Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，
 如果一个列表项内包含多个段落，那么每个段落开头都必须缩进,不然会出现奇怪的格式错误，比如识别不出下一项列表项。
 
 
-```Vim
+```
 * 张无忌道：“人家高兴，你也高兴，那才是真高兴啊。”
 
   那少女冷笑道：“哼！我跟你说在前头，这时候我心里高兴，就不来害
@@ -277,7 +272,7 @@ Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，
 在功能集合角度来说更加完备。同时，`\item`项后可以使用`[]`来设置不同的列表标记符号，
 特别是和**amssymb**宏包配合起来的时候更加强大。例如：
 
-```TeX
+```
 \begin{itemize}
 	\item[$\spadesuit$] 令狐冲
 	\item[$\clubsuit$]  任盈盈
@@ -289,7 +284,7 @@ Markdown采用`>`符号进行标记引用的内容，引用允许采用嵌套，
 ##分隔线
 在同一行中使用三个以上的`*`,`-`,`_`来建立一个分隔线，分隔线标号之间允许出现空格。
 
-```Vim
+```
 ***
 
 ---
@@ -305,7 +300,7 @@ ___
 ##代码块
 一小段语句或是表达式可以用`` ` ``号括起来，注意如果代码片段内包含`` ` ``符号，需要使用两个`` ` ``括起来
 
-```Vim
+```
 A single backtick in a code span: `` ` ``
 
 A backtick-delimited string in a code span: `` `foo` ``
@@ -322,7 +317,7 @@ A backtick-delimited string in a code span: `` `foo` ``
 若是涉及到较长的多行代码片段，简单的代码块可以采用缩进来实现。
 
 
-```Vim
+```
 下面是代码示例：
 
 	#include<stdio.h>
@@ -350,7 +345,7 @@ A backtick-delimited string in a code span: `` `foo` ``
 用下面的方法将代码段拷贝进`{% raw %}{% highlight # %}{% endraw %}`和`{% raw %}{% endhighlight %}{% endraw %}`
 之间即可。`#`表示相应的编程语言，可以参考[支持的语言](http://pygments.org/languages/)。
 
-```Vim
+```cpp
 #include<stdio.h>
 int main(void)
 {
@@ -361,7 +356,7 @@ int main(void)
 
 在LaTeX中，需要采用**listings**宏包，功能同样非常完备，下面是我喜欢的一种配置。
 
-```TeX
+```
 \usepackage{listings}
 \lstset{numbers=left,numbersep=4pt,
 frame=lines,framerule=1pt,basicstyle=\ttfamily\scriptsize,
@@ -380,7 +375,7 @@ find ./positive_images/ -name '*.pgm' -exec\
 Markdown使用`*`和`_`标号来强调，包围在两个`**`或是`__`之间的内容会显示成粗体，包围在两个`*`或是`_`之间的
 内容会显示成斜体。
 
-```Vim
+```
 **滚粗**
 
 __滚粗__
@@ -409,7 +404,7 @@ _郭襄_
 Markdown支持两种形式的链接标记，其一是行内式，链接文字用`[]`括起来，链接地址用`()`括起来。
 `"Title"`可以省略。
 
-```Vim
+```
 这是我的[主页](http://oncemore2020.github.io "Title").
 ```
 
@@ -423,7 +418,7 @@ Markdown支持两种形式的链接标记，其一是行内式，链接文字用
 参考式可以把链接地址内容在文章的任何地方用一个标记来表示，然后在其它地方引用这个
 标记。如下面这个例程，使用第一行的参考式时，`homepage`标号在第二行定义。
 
-```Vim
+```
 这是我的[主页][homepage]。
 [homepage]: http://oncemore2020.github.io  "TEMPORA MUTANTUR NOS ET MUTAMUR IN ILLIS"
 ```
@@ -438,7 +433,7 @@ Markdown支持两种形式的链接标记，其一是行内式，链接文字用
 
 也可以省略第二个`[]`里的标记，这时会默认把链接文字就当成是标号。下面提供两种比较好的范例。
 
-```Vim
+```
 I get 10 times more traffic from [Google] [1] than from
 [Yahoo] [2] or [MSN] [3].
 
@@ -448,7 +443,7 @@ I get 10 times more traffic from [Google] [1] than from
 ```
 或是
 
-```Vim
+```
 I get 10 times more traffic from [Google][] than from
 [Yahoo][] or [MSN][].
 
@@ -471,7 +466,7 @@ I get 10 times more traffic from [Google][] than from
 
 还有一种称为**自动链接**的方式，将地址直接放进`<>`中，支持网址和邮件地址。
 
-```Vim
+```
 <address@example.com>
 
 <http://example.com/>
@@ -488,7 +483,7 @@ I get 10 times more traffic from [Google][] than from
 在LaTeX中，使用**hyperref**宏包可以实现超链接和文章内的交叉引用，功能更加完备。
 如交叉应用的实现。
 
-```TeX
+```
 \label{sec:hyperlink}
 
   ...
@@ -499,7 +494,7 @@ I get 10 times more traffic from [Google][] than from
 
 以及网址的链接实现：
 
-```TeX
+```
 \url{http://oncemore2020.github.io}
 \href{http://oncemore2020.github.io}{王师的主页}
 ```
@@ -511,12 +506,12 @@ Markdown嵌入图片的方法和链接类似，也分为**行内式**和**参考
 
 **行内式**
 
-```Vim
+```
 ![Vim](/images/markdownxuexibiji/vim.png "vim logo")
 ```
 以及**参考式**
 
-```Vim
+```
 ![Vim][id]
 
 [id]: /images/markdownxuexibiji/vim.png "vim logo"
@@ -537,7 +532,7 @@ Markdown嵌入图片的方法和链接类似，也分为**行内式**和**参考
 Markdown的图片嵌入功能并不是很完善，比如不能较自由的控制图片大小位置以及对图片的引用和注释等等。相比之下，
 LaTeX处理起图片相关的任务要成熟得多。常见的使用`figure`环境，如下面的IEEE Trans的规范插图方法。
 
-```TeX
+```
 %Single Column Floating Figure
 \begin{figure*}[!t]
 \centering
@@ -562,7 +557,7 @@ LaTeX处理起图片相关的任务要成熟得多。常见的使用`figure`环�
 ##表格
 Markdown采用下面的语法来实现表格。无对齐格式的方法：
 
-```Vim
+```
 Item      | Value
 --------- | -----
 Computer  | 1600 USD
@@ -583,7 +578,7 @@ Pipe      | 1 USD
 以及设置对齐的方法,`:`在若干数量的`-`左边表示左对齐，`:`在若干数量的`-`右边
 表示右对齐，若干数量的`-`位于两个`:`中间表示中间对齐：
 
-```Vim
+```
 | Item      |    Value | Qty  |
 | :-------- | --------:| :--: |
 | Computer  | 1600 USD |  5   |
@@ -603,7 +598,7 @@ Pipe      | 1 USD
 
 与插图环境类似，LaTeX在表格方面具有更完备的功能。下面是IEEE Trans的表格规范。
 
-```TeX
+```
 %Floating Table
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.3}
@@ -623,7 +618,7 @@ Three & Four\\
 ##脚注
 Markdown使用下面的方法来设置脚注。
 
-```Vim
+```
 You can create footnotes like this[^footnote].
 
   [^footnote]: Here is the *text* of the **footnote**.
@@ -639,7 +634,7 @@ You can create footnotes like this[^footnote].
 
 如果要实现和上面相同的脚注的话，LaTeX使用`footnote`来设置。
 
-```TeX
+```
 You can create footnotes like this.\footnote{
 Here is the \emph{text} of the \textbf{footnote}.}
 ```
@@ -666,7 +661,7 @@ Here is the \emph{text} of the \textbf{footnote}.}
 <a href="http://fontawesome.io/icons/" class="btn btn-info">icons</a>
 查看可用的图标，找到图标对应的标识符之后，可采用如下的方法使用。
 
-```Vim
+```
 <i class="icon-file"></i>
 ```
 其中`icon-file`为对应图标的标识符。下面的图标都是使用Font Awesome得到的。
@@ -694,12 +689,12 @@ Here is the \emph{text} of the \textbf{footnote}.}
 首先需要在需要引用的分级标题后设置一个`{#id}`，然后在其它任何地方使用这个唯一的标识符来进行
 引用以方便文章内的跳转。比如在本文源文件的**入门-基本语法**后面进行标识。
 
-```Vim
+```
 #入门-基本语法 {#start}
 ```
 然后进行引用：
 
-```Vim
+```
 [入门-基本语法](#start)
 ```
 点击下面的链接会跳转到相应的部分。
@@ -739,7 +734,7 @@ kramdown的标识符生成算法没有考虑到中文支持，所以纯中文标
 
 如下将对`编辑器`段进行引用。
 
-```Vim
+```
 [编辑器](#section)
 ```
 点击下面链接将跳转到对应部分。
@@ -758,7 +753,7 @@ LaTeX的交叉引用功能前面已有介绍。
 kramdown规定`toc`为目录的引用名，将其放置在一个列表项目中会自动替换为当前文章
 的目录结构。
 
-```Vim
+```
 # 文章目录
 {:.no_toc}
 
@@ -777,7 +772,7 @@ LaTeX的目录自动生成功能需要使用一条`\tableofcontents`来生成。
 幸运的是kramdown内置了对LaTeX数学环境的支持，使用**MathJax**来渲染LaTeX数学表达式。但是并没有将MathJax合并
 到kramdown中，要使用MathJax，需要在html的`script`段中添加如下代码，开启通过动态加载MathJax CDN来实现转换。
 
-```html
+```
 <script type="text/javascript"
    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ```
@@ -785,7 +780,7 @@ LaTeX的目录自动生成功能需要使用一条`\tableofcontents`来生成。
 配置好MathJax以后，数学环境需要使用`$$`来包围，支持LaTeX ams宏包中的数学符号。
 例如：
 
-```Vim
+```
 $$
 \begin{align*}
   & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)

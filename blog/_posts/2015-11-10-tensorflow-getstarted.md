@@ -169,16 +169,13 @@ sess.close()
 
 和Python的文件操作符一样，不想手动关闭的话，就用`with...as...`语法，就是这么方便：
 
-
-```Python
+```python
 with tf.Session() as sess:
     result = sess.run([product])
     print result
 ```
 
-
 当具有多个处理单元时，可以使用`with...Device`来指定节点部署到哪个单元上，例如
-
 
 ```python
 with tf.Session() as sess:
@@ -195,7 +192,7 @@ with tf.Session() as sess:
 用过IPython的都知道`.eval()`，TensorFlow使用`InteractiveSession`来支持交互式运行，这样可以避免前面那样用一个变量来保持Session。示例
 
 
-```Python
+```python
 # Enter an interactive TensorFlow Session.
 import tensorflow as tf
 sess = tf.InteractiveSession()
