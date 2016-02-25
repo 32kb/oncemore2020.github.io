@@ -2,42 +2,31 @@ title: OnceMore2020
 url:              http://oncemore2020.github.io
 #url:              http://192.168.1.153:4000
 
-
-# Owner/author information
 owner:
   name:           王思墨
   weibo:          2615146412
-  google_plus:   https://plus.google.com/110411659539252839234
 
 gems:
   - jekyll-sitemap
   - jekyll-paginate
 
 timezone:    Asia/Shanghai
-future:      true
-markdown:    kramdown
-
 permalink:   /:categories/:title/
-
-paginate: 5
-paginate_path: "/blog/page:num"
-
+future:     true
 excerpt_separator: ""
+
+paginate: 6
+paginate_path: "/blog/page:num"
 
 exclude: ['booksrc', 'lecturesrc']
 
+highlighter: rouge
 kramdown:
+  input: GFM
+  syntax_highlighter: rouge
   auto_ids:       true
   footnote_nr:    1
   entity_output:  as_char
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
-  coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style

@@ -20,7 +20,8 @@ tags: [CV]
 # 测试
 OpenCV的_HOGDescriptor_有预训练的分类器可以通过`hog.setSVMDetector(HOGDescriptor::getDefaultPeopleDetector());`
 来加载，下面的代码对一张图像进行测试：
-{% highlight C %}
+
+```C
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -90,7 +91,7 @@ int main(int argc, char** argv) {
 	 waitKey(0);
 	 return EXIT_SUCCESS;
 }
-{% endhighlight %}
+```
 
 测试效果如下：
 ![HOGTestOutput](/images/HOGPed/HOGoutput.jpg)

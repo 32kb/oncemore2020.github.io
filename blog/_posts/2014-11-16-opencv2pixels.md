@@ -35,7 +35,8 @@ tags: [CV]
 ## 1.2 方法
 
 OpenCV提供`.at()`方法来随机访问像素值,先看具体实现:
-{% highlight C %}
+
+```C
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
@@ -64,7 +65,7 @@ int main()
 	cv::waitKey(0);
 	return 0;
 }
-{% endhighlight %}
+```
 
 -------
 
@@ -98,10 +99,11 @@ int main()
 
 一种直观的方法是使用`(i,j)`来访问，OpenCV提供了这种方法，使用前只需将图像存储在`cv::Mat_`类而不是`cv::Mat`类中，例如：
 
-{% highlight C %}
+
+```C
 cv::Mat_<uchar> image2=image;
 image2(50,100)=0;
-{% endhighlight %}
+```
 
 这种方法在创建图像时就把可以容纳的像素值类型都规定好了，访问像素值时不再需要指定返回类型。
 
@@ -166,7 +168,8 @@ $$
 
 一种典型的遍历访问方法是采用指针。
 
-{% highlight C %}
+
+```C
 void colorReduce(cv::Mat &image, int div=64) {
     int nl= image.rows; // number of lines
     int nc= image.cols * image.channels(); // total number of elements per line
@@ -179,7 +182,7 @@ void colorReduce(cv::Mat &image, int div=64) {
         } // end of line
     }
 }
-{% endhighlight %}
+```
 
 注意采用的是整型除法算法。
 
@@ -219,21 +222,23 @@ OpenCV内通道顺序不是R->G->B,而是B->G->R,这对所有通道"一视同仁
 (4).**高效技巧一:更多的指针操作**
 
 注意上面的程序处理过程是采用`[]`操作，如果将其改为指针操作，会得到进一步的速度提升。
-{% highlight C %}
+
+```C
 **data=*data/div*div+div2;
 data++;
-{% endhighlight %}
+```
 
 -------
 
 (5).**高效技巧二:采用位操作算法**
-{% highlight C %}
+
+```C
 int n= static_cast<int>(log(static_cast<double>(div))/log(2.0));
 char mask= 0xFF<<n;
 
 *data= *data&mask + div/2;
 data++;
-{% endhighlight %}
+```
 求**掩码**的操作很容易理解，无非是old-school math，注意前两句要放在循环体外，这好像也是一种高效技巧.
 
 -------
@@ -242,21 +247,23 @@ data++;
 
 一些图像在存储单元中是连续存储的，i.e.,可以把他们看做一个行向量(一行接一行),OpenCV采用`isContinuous()`方法来判断图像是否连续。
 在程序中加入一个分支用来处理连续图像，可以针对特定图像提高效率。
-{% highlight C %}
+
+```C
 if (image.isContinuous())  {
     nc= nc*nl;
     nl= 1;
 }
-{% endhighlight %}
+```
 
 注意这种情况下就不存在宽度填充了(因为没必要).
 
 另外`nl=1`时外面的循环语句实际上消失了，一种更极端的方式是采用`reshape()`方法来改变图像的连续性，
 然后彻底消除外循环。`reshape()`方法可以在不拷贝数据的前提下改变图像的行列数和通道数，没有像素被删除或添加，即`rows*cols*channels()`始终保持不变.
 实质上是把2维图像转换为1维序列来处理。
-{% highlight C %}
+
+```C
 image.reshape(1,image.cols*image.rows);
-{% endhighlight %}
+```
 
 -------
 
@@ -276,7 +283,8 @@ image.reshape(1,image.cols*image.rows);
 
 上面程序的函数原型都是只接收一个图像参数，将输出结果也保存在这个参数中，称为**in-place**操作。可以增加一个参数用来放输出图像，
 让输入图像完好如初。
-{% highlight C %}
+
+```C
 void colorReduce(const cv::Mat &image, // input image
                     cv::Mat &result,      // output image
                     int div=64) {
@@ -301,7 +309,7 @@ void colorReduce(const cv::Mat &image, // input image
         } // end of line
     }
 }
-{% endhighlight %}
+```
 上面的程序首先要保证存储输出结果的图像和输入图像在尺寸和数据类型上匹配，用`.creat()`操作来创建一个新`cv::Mat`对象,
 `.type()`方法返回的是类似于`CV_8UC3`之类的东西。注意`.create()`操作创建的图像总是连续图像，所以按照序列来处理它就行了。
 
@@ -311,7 +319,8 @@ void colorReduce(const cv::Mat &image, // input image
 
 在面向对象设计(OOP)中，在数据集合上进行遍历通常使用**迭代器(iterator)**，这是一种"**information hiding principle**"，
 所有访问都**不会**与存储单元面对面打交道，这样可以让程序更安全。
-{% highlight C %}
+
+```C
 void colorReduce(cv::Mat &image, int div=64) {
     int n= static_cast<int>(log(static_cast<double>(div))/log(2.0));
     uchar mask= 0xFF<<n;
@@ -325,7 +334,7 @@ void colorReduce(cv::Mat &image, int div=64) {
         // end of pixel processing ----------------
     }
 }
-{% endhighlight %}
+```
 
 -------
 
@@ -349,13 +358,14 @@ OpenCV提供了`cv::MatIterator_`和`cv::Mat_::iterator`两种迭代器类型，
 ## 2.4使用重载运算符
 
 OpenCV2采用C++接口后，对一些二元运算符进行重载，这样可以把整幅图像看做操作数，直接进行修改：
-{% highlight C %}
+
+```C
 void colorReduce(cv::Mat &image, int div=64) {
     int n= static_cast<int>(log(static_cast<double>(div))/log(2.0));
     uchar mask= 0xFF<<n;
     image=(image&cv::Scalar(mask,mask,mask))+cv::Scalar(div/2,div/2,div/2);
 }
-{% endhighlight %}
+```
 这样的好处是程序的可读性指数级增长，瞄一眼就知道它想干什么。
 
 # 3.性能比较
@@ -367,13 +377,14 @@ void colorReduce(cv::Mat &image, int div=64) {
 
 OpenCV提供了`cv::getTickCount()`和`cv::getTickFrequency()`来实现计时。前者返回开机后CPU经历的时钟周期数，后者是每**秒**多少个周期。
 则可以算出计算消耗时间：
-{% highlight C %}
+
+```C
 double init_time;
 init_time=static_cast<double>(cv::getTickCount());
 colorReduce(image);
 double duration=static_cast<double>(cv::getTickCount())-init_time;
 duration /= cv::getTickFrequency();
-{% endhighlight %}
+```
 注意单位是**秒**.
 
 ##3.2对比结果
@@ -419,7 +430,8 @@ duration /= cv::getTickFrequency();
 在色彩空间压缩算法中，对每个像素三个通道的操作是完全一样的，完全可以在一次循环内换成，而不需要每个通道用一个循环。
 这种思想即是，**把能放在一起处理的操作放到一个循环体内而不要分开处理**。采用这种思想，还可以优化程序：
 
-{% highlight C %}
+
+```C
 void colorReduce(cv::Mat &image, int div=64) {
     int nl=image.rows;
     int nc=image.cols;
@@ -437,7 +449,7 @@ void colorReduce(cv::Mat &image, int div=64) {
         }
     }
 }
-{% endhighlight %}
+```
 这个版本能把时间降到30ms，在特别需要效率的情况下可以考虑这种方式。
 
 -------

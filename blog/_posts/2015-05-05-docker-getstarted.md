@@ -174,7 +174,8 @@ vi /etc/apt/sources.list
 
 在文件开头插入以下内容
 
-{% highlight bash %}
+
+```bash
 deb http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse
 deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse
@@ -185,7 +186,7 @@ deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted unive
 deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse
 deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse
 deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse
-{% endhighlight %}
+```
 
 在容器中安装Python
 
@@ -195,9 +196,10 @@ apt-get update && apt-get install python
 
 结束后，我们使用 exit 来退出，现在我们的容器已经被我们改变了，使用 `docker commit` 命令来提交更新后的副本。
 
-{% highlight bash %}
+
+```bash
 sudo docker commit -m "revise sources.list and install python" 0b2616b0e5a8 ubuntu:python
-{% endhighlight %}
+```
 
 其中，`-m` 为提交说明，和git操作类似，之后是用来创建镜像的容器ID(之前要记住的那个)，
 最后指定目标镜像的仓库名和`TAG`信息。创建成功后会返回新镜像的ID。
@@ -224,13 +226,14 @@ touch Dockerfile
 
 Dockerfile 中每一条指令都创建镜像的**一层**，例如：
 
-{% highlight bash %}
+
+```bash
 # This is a comment
 FROM ubuntu:14.04
 MAINTAINER guanhao <guanhao@wang.com>
 RUN apt-get -q update
 RUN apt-get -y install python
-{% endhighlight %}
+```
 
 Dockerfile 基本语法:
 
@@ -256,14 +259,15 @@ sudo docker build -t="ubuntu:newpython" .
 此外，还可以利用 `ADD` 命令复制本地文件到镜像；用 `EXPOSE` 命令来向外部开放端口；
 用 `CMD` 命令来描述容器启动后运行的程序等。例如
 
-{% highlight bash %}
+
+```bash
 # put my local web site in myApp folder to /var/www
 ADD myApp /var/www
 # expose httpd port
 EXPOSE 80
 # the command to run
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
-{% endhighlight %}
+```
 
 ## 从本地文件系统导入
 
