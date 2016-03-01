@@ -1,6 +1,6 @@
 title: OnceMore2020
-url:              http://oncemore2020.github.io
-#url:              http://192.168.1.153:4000
+#url:              http://oncemore2020.github.io
+url:              http://192.168.1.153:4000
 
 owner:
   name:           王思墨
@@ -12,22 +12,19 @@ gems:
 
 timezone:    Asia/Shanghai
 permalink:   /:categories/:title/
-future:     true
-lsi: false
-safe: true
 incremental: false
-highlighter: rouge
 excerpt_separator: ""
 
-paginate: 6
+paginate: 5
 paginate_path: "/blog/page:num"
 
 exclude: ['booksrc', 'lecturesrc']
+highlighter: rouge
 
 kramdown:
   input: GFM
-  hard_wrap: false
   syntax_highlighter: rouge
+  hard_wrap: false
   auto_ids:       true
   footnote_nr:    1
   entity_output:  as_char
