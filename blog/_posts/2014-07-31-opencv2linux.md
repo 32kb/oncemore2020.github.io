@@ -17,31 +17,32 @@ tags: [CV]
 # 工作目录树
 使用CMake构建工程，工作目录应该具有如下结构：
 
-{% highlight bash %}
---------------------
+
+```bash
     |-CMakeLists.txt
     |-main.cpp
---------------------
-{% endhighlight %}
+```
 
 其中`CMakeLists.txt`是工程设定文件，稍后深入了解其内容，`main.cpp`是源程序文件。
 
 # CMake设定
 这里给出一种简单可复制的工程设定文件，在应用到其它源程序时只需要进行少量修改。
 
-{% highlight bash %}
+
+```bash
 cmake_minimum_required(VERSION 2.8)
 project( main )
 find_package( OpenCV REQUIRED )
 add_executable( main main.cpp )
 target_link_libraries( main ${OpenCV_LIBS} )
-{% endhighlight %}
+```
 
 设置文件是很容易理解的，规定了工程文件名，程序包要求，编译源文件名，编译目标可执行文件名，以及链接库对象和库路径。
 
 # 源文件
 采用一个简单的程序进行演示，程序用到`core.hpp`和`highgui.hpp`头文件，实现读入一个图像，进行水平翻转后输出到文件。代码如下：
-{% highlight bash %}
+
+```bash
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <iostream>
@@ -66,14 +67,15 @@ int main(){
     imwrite("output.jpg", result);
     return 0;
 }
-{% endhighlight %}
+```
 
 # 构建
 在工作目录里命令行输入以下指令进行构建：
-{%highlight bash %}
+
+```Bash
 cmake .
 make
-{% endhighlight %}
+```
 
 构建过程终端输出如图
 ![CLI codes](/images/opencv2linux/code.png)
