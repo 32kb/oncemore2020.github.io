@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Markdown快速上手"
-modified: 2014-03-31 20:42:37 +0800
+modified: 2016-03-01
 tags: [Valyria Steel]
 ---
 Markdown 是一种[**轻量级标记语言**](http://zh.wikipedia.org/wiki/%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80)，由 [**John Gruber**](http://en.wikipedia.org/wiki/John_Gruber) 和 [**Aaron Swartz**](http://en.wikipedia.org/wiki/Aaron_Swartz)最初设计。Markdown 在 MS Office 类文本处理器和 TeX 排版系统(算是两个派系)之间取了一个折中，同时保留了**易读性**和**易写性**。本文尝试记录快速上手 Markdown 的过程。
@@ -501,14 +501,6 @@ You can create footnotes like this[^footnote].
 
 ---
 
-如果要实现和上面相同的脚注的话，LaTeX使用`footnote`来设置。
-
-```
-You can create footnotes like this.\footnote{
-Here is the \emph{text} of the \textbf{footnote}.}
-```
-
-
 ### 交叉引用
 在需要引用的分级标题后设置一个`{#id}`，然后在其它任何地方使用这个唯一的标识符来进行引用以方便文章内的跳转。比如在本文源文件的**入门-基本语法**后面进行标识。
 
@@ -608,4 +600,6 @@ $$
 1. [Markdown Syntax](https://daringfireball.net/projects/markdown/syntax#backslash)
 2. [Github - Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 3. [kramdown Syntax](http://kramdown.gettalong.org/syntax.html)
+
+---
 
