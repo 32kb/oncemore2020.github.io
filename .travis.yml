@@ -44,6 +44,13 @@ script:
   - gitbook-ext -i
   - gitbook-ext -p
   - gitbook build
+  # knr
+  - cp ~/blogbuild/booksrc/knr ~/knrsrc -r
+  - cd ~/knrsrc
+  - gitbook install
+  - gitbook-ext -i
+  - gitbook-ext -p
+  - gitbook build
   # webdoc
   - cp ~/blogbuild/lecturesrc ~/lecturesrc -r
   - cd ~/lecturesrc
@@ -56,6 +63,7 @@ script:
   - cp ~/asoiafsrc/_book/* ~/blogbuild/books/asoiaf/ -rf
   - cp ~/future-of-code/_book/* ~/blogbuild/books/future-of-code/ -rf
   - cp ~/cpp-primersrc/_book/* ~/blogbuild/books/cpp-primer/ -rf
+  - cp ~/knrsrc/_book/* ~/blogbuild/books/knr/ -rf
   - cp ~/lecturesrc/_book/* ~/blogbuild/webdoc/ -rf
 
 after_success:
