@@ -1,27 +1,26 @@
 ---
 layout: post
 title: "HOG/linSVM检测器"
-modified: 2014-04-21 11:05:22 +0800
+modified: 2016-03-02
 tags: [CV]
 ---
-采用HOG特征进行训练的SVM分类器在中等分辨率和低处理时间限制要求下具有明显优势，笔记记录HOG特征
-的理论基础，以及采用OpenCV的_HOGDescriptor_配合SVMLight实现分类器。包括：
+采用HOG特征进行训练的SVM分类器在中等图像分辨率和低处理时间限制要求下具有优势，笔记记录HOG特征的理论基础，以及采用OpenCV的_HOGDescriptor_配合SVMLight实现分类器。包括：
 
 * HOG特征理论基础
 * 程序实现
 
-# 技术笔记
-排版为PDF格式方便下载和查看：[点此下载](/assets/pdf/HOGTechNotes.pdf)
+## 技术笔记
 
-# 训练
-可以采用[**INRIAPerson**](http://pascal.inrialpes.fr/data/human/)数据集进行训练和测试。笔记内提供了训练的方法和
-实现。
+PDF格式：[点此下载](/blog/media/hog-using-opencv/HOGTechNotes.pdf)
 
-# 测试
-OpenCV的_HOGDescriptor_有预训练的分类器可以通过`hog.setSVMDetector(HOGDescriptor::getDefaultPeopleDetector());`
-来加载，下面的代码对一张图像进行测试：
+## 训练
 
-```C
+采用[**INRIAPerson**](http://pascal.inrialpes.fr/data/human/)数据集进行训练和测试。笔记内提供了训练的方法和实现。
+
+## 测试
+OpenCV的_HOGDescriptor_有预训练的分类器可以通过`hog.setSVMDetector(HOGDescriptor::getDefaultPeopleDetector());`来加载，示例：
+
+```cpp
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -94,12 +93,14 @@ int main(int argc, char** argv) {
 ```
 
 测试效果如下：
-![HOGTestOutput](/images/HOGPed/HOGoutput.jpg)
+![HOGTestOutput](/blog/media/hog-using-opencv/HOGoutput.jpg)
 
 
-# 拓展
-在DT-2005以后直方图类算法得到了比较完善的改进，
-一方面是HOG特征计算方法的改进，另一方面将HOG
-特征和AdaBoost算法联合形成分类器。下一步的关于
-HOG的学习打算聚焦于_Improving object detection with boosted histograms_
-这篇文章。
+## 后续发展
+在DT-2005以后直方图类算法得到了比较完善的改进，一方面是HOG特征计算方法的改进，另一方面将HOG特征和AdaBoost算法联合形成分类器，OpenCV 也提供了对应的实现，参考：
+
+_Laptev I._ Improving object detection with boosted histograms[J]. _Image and Vision Computing, 2009, 27(5): 535-544._
+
+后续在行人检测方面也有新的算法提出，建议参考
+
+_Benenson R, Omran M, Hosang J, et al._ Ten years of pedestrian detection, what have we learned?[C]. _Computer Vision-ECCV 2014 Workshops. Springer International Publishing, 2014: 613-627._
